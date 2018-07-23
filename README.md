@@ -1,24 +1,7 @@
-# README
+# Project 3 - Crowded Or Not?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_proudly presented by Say Wan, Wen Yao, and Elvera_
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> A revolutionary app for business owners to display the live number of available seats in the establishments.
+> On one side, people interested in heading to one of the registered establishments can check for availability of seats.
+> On another side, the registered establishments can update their status through their personal control page.
