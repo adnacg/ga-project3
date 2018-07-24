@@ -1,6 +1,4 @@
-<% if user_signed_in? %>
-
-<h1>welcome <%= @current_user.name%></h1>
+<h1>Welcome <%= @user.name%></h1>
 
   <table>
     <tr>
@@ -17,4 +15,3 @@
       </tr>
     <% end %>
   </table>
-<% end %>

@@ -1,6 +1,6 @@
 <h1>Tables#edit</h1>
 
-<%= form_with scope: :table, url: user_table_path, local: true do |form| %>
+<%= form_with scope: :table, url: table_path, method: :patch, local: true do |form| %>
 
   <p>
     <%= form.label :seater %><br>
@@ -18,7 +18,6 @@
 <% end %>
 
 <td><%= link_to 'Delete this table',
-        user_table_path(@table),
+        @table,
         method: :delete,
         data: { confirm: 'Delete this table?' } %></td>
-
