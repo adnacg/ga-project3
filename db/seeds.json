@@ -1,0 +1,265 @@
+{
+  "user": [
+    {
+      "name": "La Nonna Holland Village",
+      "email": "hello@lanonna.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Tai Cheong Bakery",
+      "email": "hello@taicheong.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "El Patio Mexican Restaurant & Wine Bar",
+      "email": "hello@elpatio.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Sunday Folks",
+      "email": "hello@sundayfolks.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "British Indian Curry Hut",
+      "email": "hello@bich.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Wala Wala",
+      "email": "hello@wala.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Nakhon Kitchen HV",
+      "email": "hello@nakhon.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Cha Cha Cha",
+      "email": "hello@chachacha.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Kinara",
+      "email": "hello@kinara.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Da Paolo Gastronomia",
+      "email": "hello@dapaolo.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Chopsuey Cafe At Dempsey",
+      "email": "hello@chopsuey.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Blu Kouzina",
+      "email": "hello@blukouzina.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Morsels",
+      "email": "hello@morsels.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Don Quijote",
+      "email": "hello@donquijote.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Jim Thompson",
+      "email": "hello@jimthompson.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Muthu's Curry",
+      "email": "hello@muthucurry.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "The White Rabbit",
+      "email": "hello@whiterabbit.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "La Salsa",
+      "email": "hello@lasalsa.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Dempsey Hill",
+      "email": "hello@dempseyhill.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Original Sin",
+      "email": "hello@originalsin.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Madrinaa Italiano",
+      "email": "hello@madrinaa.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Da Paolo PizzaBar",
+      "email": "hello@pizzabar.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "The Blue Ginger",
+      "email": "hello@blueginger.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Cumi Bali",
+      "email": "hello@cumibali.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Teppei",
+      "email": "hello@teppei.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Tendon Ginza Itsuki",
+      "email": "hello@tendon.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Ramen Keisuke",
+      "email": "hello@keisuke.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Sushiro",
+      "email": "hello@sushiro.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    },
+    {
+      "name": "Artichoke",
+      "email": "hello@artichoke.com",
+      "password": "test123",
+      "password_confirmation": "test123",
+      "six_seater": 5,
+      "four_seater": 15,
+      "two_seater": 10
+    }
+  ]
+}
