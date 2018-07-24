@@ -8,11 +8,9 @@
     <th>user_id</th>
   </tr>
 
-  <% @tables.each do |table| %>
     <tr>
-      <td><%= table.seater %></td>
-      <td><%= table.is_free %></td>
-      <td><%= table.user_id %></td>
+      <td><%= @showTable.seater %></td>
+      <td><%= @showTable.is_free %></td>
+      <td><%= @showTable.user_id %></td>
     </tr>
-  <% end %>
 </table>
