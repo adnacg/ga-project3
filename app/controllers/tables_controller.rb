@@ -1,6 +1,10 @@
 class TablesController < ApplicationController
+ 
+  before_action :authenticate_user!
+
   def index
-    @tables = Table.all
+    @current_user = User.find_by_id(2)
+    @tables = @current_user.tables
   end
 
   def show
