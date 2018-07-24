@@ -1,2 +1,16 @@
 <h1>Tables#show</h1>
 <p>Find me in app/views/tables/show.html.erb</p>
+
+<table>
+  <tr>
+    <th>Seater</th>
+    <th>Availablilty</th>
+    <th>user_id</th>
+  </tr>
+
+    <tr>
+      <td><%= @tables.seater %></td>
+      <td><%= @tables.is_free %></td>
+      <td><%= @tables.user_id %></td>
+    </tr>
+</table>

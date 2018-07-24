@@ -1,10 +1,10 @@
 class TablesController < ApplicationController
   def index
-    
+    @tables = Table.all
   end
 
   def show
-
+    @tables = Table.find(params[:id])
   end
 
   def new
