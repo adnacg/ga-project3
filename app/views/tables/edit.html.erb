@@ -1,2 +1,23 @@
 <h1>Tables#edit</h1>
-<p>Find me in app/views/tables/edit.html.erb</p>
+
+<%= form_with scope: :table, url: user_table_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :seater %><br>
+    <%= form.text_area :seater %>
+  </p>
+
+  <p>
+    <%= form.label :is_free, 'Availability' %><br>
+    <%= form.select :is_free, [['Available', true], ['Occupied', false]] %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<td><%= link_to 'Delete this table',
+        # user_table_path(@table),
+        method: :delete,
+        data: { confirm: 'Delete this table?' } %></td>

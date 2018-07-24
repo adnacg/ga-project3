@@ -1,2 +1,16 @@
 <h1>Tables#new</h1>
-<p>Find me in app/views/tables/new.html.erb</p>
+
+<h2>Create A Table</h2>
+
+<%= form_with scope: :table, url: user_tables_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :seater %><br>
+    <%= form.text_area :seater %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
