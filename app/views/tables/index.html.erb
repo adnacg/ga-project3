@@ -1,17 +1,15 @@
-<h1>Welcome <%= @user.name%></h1>
+<h1>Welcome Back, <%= @user.name%></h1>
 
   <table>
     <tr>
       <th>Seater</th>
       <th>Availablilty</th>
-      <th>user_id</th>
     </tr>
 
     <% @tables.each do |table| %>
       <tr>
         <td><%= table.seater %></td>
         <td><%= table.is_free %></td>
-        <td><%= table.user_id %></td>
       </tr>
     <% end %>
   </table>

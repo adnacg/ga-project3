@@ -1,0 +1,6 @@
+<h1>List All Users</h1>
+
+<h4>Click To View The Available Seats At Our Amazing Restaurants</h4>
+<% @users.each do |user| %>
+  <%= link_to user.name, user_path(user) %></br>
+<% end %>
