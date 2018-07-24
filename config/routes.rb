@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :tables, only: [:show, :edit, :update, :destroy]
 
-  delete '/tables/delete', to: 'tables#delete', as: 'tables'
+  delete '/tables/:type/delete', to: 'tables#delete', as: 'tables'
 
 end

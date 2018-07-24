@@ -14,6 +14,12 @@ class TablesController < ApplicationController
     # method/controller: user_tables GET => tables#index
     @user = User.find(params[:user_id])
     @tables = @user.tables
+    @two_seaters_free = @tables.where('seater': 2, 'is_free': true).count
+    @two_seaters_total = @tables.where('seater': 2).count
+    @four_seaters_free = @tables.where('seater': 4, 'is_free': true).count
+    @four_seaters_total = @tables.where('seater': 4).count
+    @six_seaters_free = @tables.where('seater': 6, 'is_free': true).count
+    @six_seaters_total = @tables.where('seater': 6).count
   end
 
   def show
@@ -33,11 +39,12 @@ class TablesController < ApplicationController
   def create
     # route: /users/:user_id/tables
     # method/controller: user_tables POST => tables#create
-    new_table = Table.new(table_params)
+    new_table = Table.new
+    new_table.seater = params[:seater].to_i
     new_table.user = User.find(params[:user_id])
     new_table.is_free = true
     if new_table.save
-      redirect_to new_table
+      redirect_to user_tables_path
     else
       render 'new'
     end
@@ -66,8 +73,21 @@ class TablesController < ApplicationController
     redirect_to user_tables_path(user)
   end
 
+  def delete
+    # route: /tables/:type/delete
+    # method/controller: tables DELETE => tables#delete
+    puts params
+    table = Table.find_by('seater': params[:seat_type].to_i, 'user_id': current_user.id)
+    puts "walao #{table}"
+    if table
+      table.destroy
+    end
+    redirect_to user_tables_path(current_user)
+  end
+
   private
   def table_params
     params.require(:table).permit(:seater, :is_free, :user_id)
   end
+
 end

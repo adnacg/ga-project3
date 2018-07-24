@@ -1,4 +1,30 @@
 <h1>Welcome Back, <%= @user.name%></h1>
+<h3>My Profile</h3>
+
+<div>
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
+    <h3>2-Seaters</h3>
+    <h3><%= @two_seaters_free  %> available / <%= @two_seaters_total %> total </h3>
+    <p><%= button_to 'Create A Table', user_tables_path(current_user), method: :post, params: {seater: 2, is_free: true} %></p>
+    <p><%= button_to 'Delete A Table', tables_path(current_user), method: :delete, params: {seat_type: 2} %></p>
+  </div>
+
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
+    <h3>4-Seaters</h3>
+    <h3><%= @four_seaters_free  %> available / <%= @four_seaters_total %> total </h3>
+    <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 4, is_free: true} %></p>
+    <p><%= button_to 'Delete A Table', tables_path(current_user), method: :delete, params: {seat_type: 4} %></p>
+  </div>
+
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; padding: 10px">
+    <h3>6-Seaters</h3>
+    <h3><%= @six_seaters_free  %> available / <%= @six_seaters_total %> total </h3>
+    <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 6, is_free: true} %></p>
+    <p><%= button_to 'Delete A Table', tables_path(current_user), method: :delete, params: {seat_type: 6} %></p>
+  </div>
+</div>
+
+
 
   <table>
     <tr>
@@ -13,3 +39,4 @@
       </tr>
     <% end %>
   </table>
+
