@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  get 'tables/index'
+  get 'tables/show'
+  get 'tables/new'
+  get 'tables/create'
+  get 'tables/edit'
+  get 'tables/update'
+  get 'tables/destroy'
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
 
   resources :users, only: [:index, :show] do
     resources :tables, only: [:index, :show, :new, :create, :edit, :update, :destroy]
