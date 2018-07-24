@@ -18,6 +18,7 @@
 <% end %>
 
 <td><%= link_to 'Delete this table',
-        # user_table_path(@table),
+        user_table_path(@table),
         method: :delete,
         data: { confirm: 'Delete this table?' } %></td>
+
