@@ -3,12 +3,12 @@ class TablesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @current_user = User.find_by_id(4)
+    @current_user = User.find_by_id(current_user.id)
     @tables = @current_user.tables
   end
 
   def show
-    @current_user = User.find_by_id(4)
+    @current_user = User.find_by_id(current_user.id)
     @tables = @current_user.tables
     @showTable = @tables.find(params[:id])
   end
