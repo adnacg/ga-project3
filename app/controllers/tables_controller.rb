@@ -22,11 +22,8 @@ class TablesController < ApplicationController
   end
 
   def destroy
-  end
-
-  private
-
-  def table_params
-    params.require(:tables).permit(:seater, :is_free)
+    @table = Table.find_by(:user_id => params[:user_id], :id => params[:id])
+    @table.destroy
+    redirect_to user_tables
   end
 end
