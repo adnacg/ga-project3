@@ -1,16 +1,19 @@
 <%= link_to 'Return to previous page', users_path %></br>
 <h1>Tables available at <%= @user.name %></h1>
 
-<table>
-  <tr>
-    <th>Seater</th>
-    <th>Availablilty</th>
-  </tr>
+<div>
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
+    <h3>2-Seaters</h3>
+    <h3><%= @two_seaters_free.count  %> available / <%= @two_seaters_total %> total </h3>
+  </div>
 
-<% @user.tables.each do |table| %>
-  <tr>
-      <td><%= table.seater %></td>
-      <td><%= table.is_free %></td>
-  </tr>
-<% end %>
-</table>
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
+    <h3>4-Seaters</h3>
+    <h3><%= @four_seaters_free.count  %> available / <%= @four_seaters_total %> total </h3>
+  </div>
+
+  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; padding: 10px">
+    <h3>6-Seaters</h3>
+    <h3><%= @six_seaters_free.count  %> available / <%= @six_seaters_total %> total </h3>
+  </div>
+</div>
