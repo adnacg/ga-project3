@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "main#index"
 
-  devise_for :users, path: 'users'
+  devise_for :users, path: 'users', :controllers => { registrations: 'users/registrations' }
   devise_for :patrons, path: 'patrons'
 
   resources :users, only: [:index, :show] do
