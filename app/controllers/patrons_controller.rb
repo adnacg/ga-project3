@@ -14,7 +14,7 @@ class PatronsController < ApplicationController
   end
 
   def edit
-    @patrons = Patron.find(params[:id])
+    @patron = Patron.find(params[:id])
   end
 
   def update
@@ -25,12 +25,15 @@ class PatronsController < ApplicationController
 
   def destroy
     patron = Patron.find(params[:id])
-    patron.destroy
-    redirect_to root_path
+    if patron.destroy
+      redirect_to root_path
+    else
+      redirect_to patron
+    end
   end
 
   private
   def patron_params
-    params.require(:patron).permit(:name, :email)
+    params.require(:patron).permit(:name)
   end
 end

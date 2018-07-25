@@ -3,5 +3,5 @@
   <h3>Name:<%= @patron.name %></h3>
   <h3>Email:<%= @patron.email %></h3>
   <p><%= button_to 'Edit Profile', edit_patron_path(current_patron), method: :get%></p>
-  <p><%= button_to 'Delete Profile', patron_path(current_patron), method: :delete %></p>
+  <p><%= button_to 'Delete Profile', patron_path(current_patron), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </div>
