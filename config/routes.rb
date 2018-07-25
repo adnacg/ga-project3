@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   delete '/tables/:type/delete', to: 'tables#delete', as: 'tables'
 
   resources :patrons, only: [:show, :edit, :update, :destroy] do
-    resources :favourites, only: [:index, :create, :destroy]
+
+    resources :favourites, only: [:create, :index, :destroy]
+
   end
 
 end
