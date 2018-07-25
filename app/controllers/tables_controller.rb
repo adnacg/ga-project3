@@ -14,12 +14,15 @@ class TablesController < ApplicationController
     # method/controller: user_tables GET => tables#index
     @user = User.find(params[:user_id])
     @tables = @user.tables
-    @two_seaters_free = @tables.where('seater': 2, 'is_free': true).count
+    @two_seaters_free = @tables.where('seater': 2, 'is_free': true)
     @two_seaters_total = @tables.where('seater': 2).count
-    @four_seaters_free = @tables.where('seater': 4, 'is_free': true).count
+    @four_seaters_free = @tables.where('seater': 4, 'is_free': true)
     @four_seaters_total = @tables.where('seater': 4).count
-    @six_seaters_free = @tables.where('seater': 6, 'is_free': true).count
+    @six_seaters_free = @tables.where('seater': 6, 'is_free': true)
     @six_seaters_total = @tables.where('seater': 6).count
+    @two_seaters_busy = @tables.where('seater': 2, 'is_free': false)
+    @four_seaters_busy = @tables.where('seater': 4, 'is_free': false)
+    @six_seaters_busy = @tables.where('seater': 6, 'is_free': false)
   end
 
   def show
@@ -60,8 +63,9 @@ class TablesController < ApplicationController
     # route: /tables/:id
     # method/controller: table PATCH => tables#update
     table = Table.find(params[:id])
-    table.update(table_params)
-    redirect_to table
+    user = table.user
+    table.update(is_free: params[:is_free])
+    redirect_to user_tables_path(user)
   end
 
   def destroy
