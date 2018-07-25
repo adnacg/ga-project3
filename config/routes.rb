@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   devise_for :patrons, path: 'patrons'
 
   resources :users, only: [:index, :show] do
-    resources :tables, only: [:index, :new, :create]
+    resources :tables, only: [:index, :create]
   end
 
-  resources :tables, only: [:show, :edit, :update, :destroy]
+  resources :tables, only: [:show]
 
-  delete '/tables/:type/delete', to: 'tables#delete', as: 'tables'
+  delete '/tables/:user_id/delete', to: 'tables#destroy', as: 'table_delete'
+  patch '/tables/:user_id/update', to: 'tables#update', as: 'table_update'
 
   resources :patrons, only: [:show, :edit, :update, :destroy] do
     resources :favourites, only: [:create, :index, :destroy]

@@ -14,15 +14,12 @@ class TablesController < ApplicationController
     # method/controller: user_tables GET => tables#index
     @user = User.find(params[:user_id])
     @tables = @user.tables
-    @two_seaters_free = @tables.where('seater': 2, 'is_free': true)
+    @two_seaters_free_total = @tables.where('seater': 2, 'is_free': true).count
     @two_seaters_total = @tables.where('seater': 2).count
-    @four_seaters_free = @tables.where('seater': 4, 'is_free': true)
+    @four_seaters_free_total = @tables.where('seater': 4, 'is_free': true).count
     @four_seaters_total = @tables.where('seater': 4).count
-    @six_seaters_free = @tables.where('seater': 6, 'is_free': true)
+    @six_seaters_free_total = @tables.where('seater': 6, 'is_free': true).count
     @six_seaters_total = @tables.where('seater': 6).count
-    @two_seaters_busy = @tables.where('seater': 2, 'is_free': false)
-    @four_seaters_busy = @tables.where('seater': 4, 'is_free': false)
-    @six_seaters_busy = @tables.where('seater': 6, 'is_free': false)
   end
 
   def show
@@ -32,11 +29,6 @@ class TablesController < ApplicationController
     if @table.user_id != current_user.id
       redirect_to ('/')
     end
-  end
-
-  def new
-    # route: /users/:user_id/tables/new
-    # method/controller: new_user_table GET => tables#new
   end
 
   def create
@@ -53,40 +45,31 @@ class TablesController < ApplicationController
     end
   end
 
-  def edit
-    # route: /tables/:id/edit
-    # method/controller: edit_table GET => tables#edit
-    @table = Table.find(params[:id])
-  end
-
   def update
-    # route: /tables/:id
-    # method/controller: table PATCH => tables#update
-    table = Table.find(params[:id])
-    user = table.user
-    table.update(is_free: params[:is_free])
+    # custom route
+    # route: /tables/:user_id/update
+    # method/controller: table_update PATCH => tables#update
+    user = User.find(params[:user_id])
+    free = params[:free] == "true"
+    filtered_tables = user.tables.where(is_free: !free, seater: params[:seater].to_i)
+    puts 'walao'
+    puts "walaoeh #{filtered_tables.count} walaoeh"
+    if filtered_tables.count > 0
+      filtered_tables.first.update(is_free: free)
+    end
     redirect_to user_tables_path(user)
   end
 
   def destroy
-    # route: /tables/:id
-    # method/controller: table DELETE => tables#destroy
-    table = Table.find(params[:id])
-    user = table.user
-    table.destroy
-    redirect_to user_tables_path(user)
-  end
-
-  def delete
-    # route: /tables/:type/delete
-    # method/controller: tables DELETE => tables#delete
-    puts params
-    table = Table.find_by('seater': params[:seat_type].to_i, 'user_id': current_user.id)
-    puts "walao #{table}"
+    # custom route
+    # route: /tables/:user_id/delete
+    # method/controller: table_delete DELETE => tables#destroy
+    table = Table.find_by('seater': params[:seater].to_i, 'user_id': params[:user_id].to_i)
     if table
       table.destroy
     end
-    redirect_to user_tables_path(current_user)
+    user = User.find(params[:user_id].to_i)
+    redirect_to user_tables_path(user)
   end
 
   private

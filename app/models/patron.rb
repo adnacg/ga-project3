@@ -4,4 +4,5 @@ class Patron < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :favourites
+  has_many :users, through: :favourites
 end
