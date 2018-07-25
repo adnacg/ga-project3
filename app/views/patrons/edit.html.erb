@@ -1,2 +1,18 @@
 <h1>Patrons#edit</h1>
-<p>Find me in app/views/patrons/edit.html.erb</p>
+
+<%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
