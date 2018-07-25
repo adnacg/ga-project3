@@ -1,0 +1,29 @@
+<h1>First time here? Tell us more about yourself!</h1>
+
+<%= form_with scope: :user, url: user_update_path(current_user), local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :two_seater, 'Two-Seater' %><br>
+    <%= form.number_field :two_seater, :min => 0, :max => 100, value: 0 %>
+  </p>
+
+  <p>
+    <%= form.label :four_seater, 'Four-Seater' %><br>
+    <%= form.number_field :four_seater, :min => 0, :max => 100, value: 0 %>
+  </p>
+
+  <p>
+    <%= form.label :six_seater, 'Six-Seater' %><br>
+    <%= form.number_field :six_seater, :min => 0, :max => 100, value: 0 %>
+  </p>
+
+  <p>
+    <%= form.submit 'Save My Info!' %>
+  </p>
+
+<% end %>

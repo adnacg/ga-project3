@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   resources :tables, only: [:show]
 
+  get '/users/:user_id/setup', to: 'users#setup', as: 'user_setup'
+  post '/users/:user_id/setup', to: 'users#update', as: 'user_update'
+
   delete '/tables/:user_id/delete', to: 'tables#destroy', as: 'table_delete'
   patch '/tables/:user_id/update', to: 'tables#update', as: 'table_update'
 

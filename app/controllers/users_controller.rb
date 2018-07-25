@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
+  def check_user
+    if params[:user_id]
+      redirect_to('/') if current_user.id != params[:user_id].to_i
+    end
+  end
+
+  before_action :check_user
+
   def index
     @users = User.all
   end
@@ -12,5 +22,43 @@ class UsersController < ApplicationController
     @four_seaters_total = @tables.where('seater': 4).count
     @six_seaters_free = @tables.where('seater': 6, 'is_free': true)
     @six_seaters_total = @tables.where('seater': 6).count
+  end
+
+  def setup
+    @user = User.find(params[:user_id].to_i)
+  end
+
+  def update
+    user = User.find(params[:user_id].to_i)
+    user.name = params[:user][:name]
+    for i in 0...params[:user][:two_seater].to_i
+      new_table = Table.new
+      new_table.seater = 2
+      new_table.is_free = true
+      user.tables << new_table
+      if !new_table.save
+        redirect_to user_update_path(user)
+      end
+    end
+    for i in 0...params[:user][:four_seater].to_i
+      new_table = Table.new
+      new_table.seater = 4
+      new_table.is_free = true
+      user.tables << new_table
+      if !new_table.save
+        redirect_to user_update_path(user)
+      end
+    end
+    for i in 0...params[:user][:six_seater].to_i
+      new_table = Table.new
+      new_table.seater = 6
+      new_table.is_free = true
+      user.tables << new_table
+      if !new_table.save
+        redirect_to user_update_path(user)
+      end
+    end
+    user.save
+    redirect_to user_tables_path(user)
   end
 end
