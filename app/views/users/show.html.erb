@@ -2,7 +2,11 @@
 <h1>Tables available at <%= @user.name %></h1>
 
 <% if patron_signed_in? %>
-  <%= button_to 'Favourite', patron_favourites_path(current_patron), method: :post %>
+  <% if @is_favourite %>
+    <%= button_to 'Remove From Favourites', favourite_delete_path(current_patron), method: :delete, params: { user_id: @user.id } %>
+  <% else %>
+    <%= button_to 'Add To Favourites', patron_favourites_path(current_patron), method: :post, params: { user_id: @user.id } %>
+  <% end %>
 <% end %>
 
 <div>

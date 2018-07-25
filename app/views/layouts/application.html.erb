@@ -26,6 +26,7 @@
 
       <% elsif patron_signed_in? %>
         <%= link_to 'Profile', patron_path(current_patron) %>
+        <%= link_to 'My Favourites', patron_favourites_path(current_patron) %>
         <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete %>
       <% end %>
     </nav>

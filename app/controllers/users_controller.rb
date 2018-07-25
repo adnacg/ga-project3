@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     @four_seaters_total = @tables.where('seater': 4).count
     @six_seaters_free = @tables.where('seater': 6, 'is_free': true)
     @six_seaters_total = @tables.where('seater': 6).count
+
+    if current_patron
+      @is_favourite = @user.patrons.include?(current_patron)
+    end
   end
 
   def setup

@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   patch '/tables/:user_id/update', to: 'tables#update', as: 'table_update'
 
   resources :patrons, only: [:show, :edit, :update, :destroy] do
-    resources :favourites, only: [:create, :index, :destroy]
+    resources :favourites, only: [:create, :index]
   end
+
+  delete '/patrons/:patron_id/favourites', to: 'favourites#destroy', as: 'favourite_delete'
 
 end
