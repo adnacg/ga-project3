@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   before_action :check_user
 
   def index
-    @users = User.all
+    puts params[:search]
+    @users = User.search(params[:search])
     @users_info = Hash.new
     @users.each do |user|
       total_tables = Table.where(user_id: user.id)
