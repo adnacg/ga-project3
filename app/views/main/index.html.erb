@@ -1,6 +1,14 @@
-<h1>Crowded Or Not?</h1>
+<div class="container">
+  <div>
+    <h1>Looking for sits?</h1>
 
-<h3>Sign Up Now</h3>
+    <%= form_tag("/search", method: "get") do %>
+      <%= text_field_tag(:q, nil, placeholder: 'Enter Location (e.g. Jurong East...)') %>
+      <br/>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <%= button_to "Show All", users_path, method: :get %>
+   
+  </div>
+</div>
 
-<p><%= link_to 'I Am A Restaurant', new_user_registration_url, method: :get %></p>
-<p><%= link_to 'I Am A Patron', new_patron_registration_url, method: :get %></p>

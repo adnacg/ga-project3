@@ -1,3 +1,38 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 550px;
+}
+
+.container input[type=text]{
+  margin: 20px;
+  width: 600px;
+  height: 50px;
+  font-size: 32px; 
+}
+
+.container input[type=submit]{
+  float: right;
+  position: relative;
+  left: -54%;
+  padding: 0 35px;
+
+}
+
+.button_to{
+  float: right;
+  position: relative;
+  left: 10%;
+  padding: 0 35px;
+}
+
+
+
+
+
