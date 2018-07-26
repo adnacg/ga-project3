@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Crowded Or Not</title>
+    <title>Crowded Not</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -21,7 +22,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <%= link_to 'Home', root_url, method: :get, class: "navbar-brand" %>
+          <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand" %>
           <%= link_to 'Explore', users_url, method: :get, class: "nav-item nav-link" %>
 
           <% if !user_signed_in? && !patron_signed_in? %>
@@ -42,5 +43,23 @@
     </nav>
 
     <%= yield %>
+
+    <footer class="page-footer text-center fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 py-5">
+            <div class="mb-4 flex-center">
+              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3 fa-2x"></i></a>
+              <a href="#"><i class="fa fa-instagram fa-lg fa-2x"></i></a>
+            </div>
+          © 2018 Copyright
+          <a href="#">CrowdedNot</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   </body>
 </html>
