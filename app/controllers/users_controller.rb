@@ -11,6 +11,16 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @users_info = Hash.new
+    @users.each do |user|
+      total_tables = Table.where(user_id: user.id)
+      free_tables = total_tables.where(is_free: true)
+      @users_info[user.id] = {
+        name: user.name,
+        total_tables_count: total_tables.count,
+        free_tables_count: free_tables.count
+      }
+    end
   end
 
   def show
