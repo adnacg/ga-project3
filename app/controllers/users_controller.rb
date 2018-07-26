@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     @six_seaters_total = @tables.where('seater': 6).count
 
     if current_patron
-      @is_favourite = @user.patrons.include?(current_patron)
+      @is_favourite = @user.favourite_patrons.include?(current_patron)
     end
   end
 
