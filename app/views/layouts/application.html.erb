@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,25 +41,29 @@
         </div>
       </div>
     </nav>
+    </div>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
-    <footer class="page-footer text-center fixed-bottom">
+    <footer class="page-footer text-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 py-5">
+          <div class="col-md-12 py-3">
             <div class="mb-4 flex-center">
-              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i></a>
-              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i></a>
-              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3 fa-2x"></i></a>
-              <a href="#"><i class="fa fa-instagram fa-lg fa-2x"></i></a>
+              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
             </div>
-          © 2018 Copyright
-          <a href="#">CrowdedNot</a>
+            <p>© 2018 Copyright &nbsp;&nbsp;<a href="#">CrowdedNot</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
   </body>
 </html>
