@@ -35,11 +35,16 @@ class TablesController < ApplicationController
     # route: /users/:user_id/tables
     # method/controller: user_tables POST => tables#create
     new_table = Table.new
+    user = User.find(params[:user_id])
     new_table.seater = params[:seater].to_i
-    new_table.user = User.find(params[:user_id])
+    new_table.user = user
     new_table.is_free = true
     if new_table.save
-      redirect_to user_tables_path
+      # redirect_to user_tables_path
+      @totalCountElementId = "#{params[:seater]}_seater_total_tables"
+      @freeCountElementId = "#{params[:seater]}_seater_free_tables"
+      @total_tables_count = user.tables.where(seater: params[:seater].to_i).count
+      @free_tables_count = user.tables.where(is_free: true, seater: params[:seater].to_i).count
     else
       render 'new'
     end
@@ -52,24 +57,31 @@ class TablesController < ApplicationController
     user = User.find(params[:user_id])
     free = params[:free] == "true"
     filtered_tables = user.tables.where(is_free: !free, seater: params[:seater].to_i)
-    puts 'walao'
-    puts "walaoeh #{filtered_tables.count} walaoeh"
     if filtered_tables.count > 0
       filtered_tables.first.update(is_free: free)
     end
-    redirect_to user_tables_path(user)
+    # redirect_to user_tables_path(user)
+    @elementId = "#{params[:seater]}_seater_free_tables"
+    @free_tables_count = user.tables.where(is_free: true, seater: params[:seater].to_i).count
   end
 
   def destroy
     # custom route
     # route: /tables/:user_id/delete
     # method/controller: table_delete DELETE => tables#destroy
-    table = Table.find_by('seater': params[:seater].to_i, 'user_id': params[:user_id].to_i)
-    if table
-      table.destroy
+    free_tables = Table.where('seater': params[:seater].to_i, 'user_id': params[:user_id].to_i, is_free: true)
+    if free_tables.count > 0
+      @error = false
+      free_tables.first.destroy
+      user = User.find(params[:user_id].to_i)
+      # redirect_to user_tables_path(user)
+      @totalCountElementId = "#{params[:seater]}_seater_total_tables"
+      @freeCountElementId = "#{params[:seater]}_seater_free_tables"
+      @total_tables_count = user.tables.where(seater: params[:seater].to_i).count
+      @free_tables_count = user.tables.where(seater: params[:seater].to_i, is_free: true).count
+    else
+      @error = true
     end
-    user = User.find(params[:user_id].to_i)
-    redirect_to user_tables_path(user)
   end
 
   private
