@@ -2,7 +2,7 @@
 
 <%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
 
-  <p>
+  <p class="test">
     <%= form.label :name %><br>
     <%= form.text_area :name %>
   </p>
