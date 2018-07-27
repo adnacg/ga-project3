@@ -10,9 +10,11 @@
 }
 
 .wyprofile {
+   display: block;
+   margin: 0 auto;
    height: 300px;
    position: relative;
-   left: 15%;
+   left: 30%;
    text-align: center;
 }
 
@@ -50,6 +52,18 @@
    align-self: flex-end;
 }
 
+.wybtns .editBtn p {
+   margin-bottom: 8px;
+}
+
+.wybtns .editBtn .button_to {
+   margin-bottom: 20px;
+}
+
+.wybtns .deleteBtn p {
+   margin-bottom: 8px;
+}
+
 .wytitle {
    width: 500px;
    padding-bottom: 8px;
@@ -78,6 +92,7 @@
 .wyEditPic > button {
    display: block;
    margin: 10px auto 0 auto;
+   
 }
 
 .wyEdit > label {
