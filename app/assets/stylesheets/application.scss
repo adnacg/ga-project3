@@ -20,3 +20,22 @@
 @import "patrons.scss";
 @import "favourites.scss";
 
+.modal-header{
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0px;
+}
+
+.patronbtn{
+  float: right;
+  position: relative;
+  left: -21%;
+  width: 110px;
+}
+
+.userbtn{
+  float: right;
+  position: relative;
+  left: -33%;
+  width: 110px;
+}
