@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" style="display: flex; justify-content: center; background-color: #EEE2DC; color: #123C69;">
 <div class="row">
 <div class="col-sm">
 
-  <i class="material-icons">keyboard_return</i>&nbsp;
+  <i class="material-icons" style="margin-top: 50px">keyboard_return</i>&nbsp;
   <div>
     <p><%= link_to 'Previous page', users_path %></p>
   </div>
 
   <div>
     <p>Tables available at <strong><%= @user.name %></strong></p>
-    <p>Address: 8 Claymore Road, Singapore 168888</p>
+    <p>Address: 8 Claymore Hill, Singapore 168888</p>
     <p>Contact: 6888-6888</p>
     <p><a href="#">Book Now</a></p>
   </div>
@@ -22,28 +22,35 @@
     <% end %>
   <% end %>
 
-  <div>
-    <div style="text-align: center; float: left; width: 300px; height: 500px; margin-right: 20px; padding: 10px">
-      <p><%= image_tag("table.jpg", size: "300x300") %></p>
-      <p><strong>2-Seaters</strong></p>
-      <p><%= @two_seaters_free.count  %> available / <%= @two_seaters_total %> total </p>
+  <div style="margin-top: 50px">
+    <div style="text-align: center; float: left; width: 300px; height: 450px; margin-right: 20px; padding: 10px">
+      <p><%= image_tag("table.png", size: "200x200") %></p>
+      <%= image_tag("splash.png", size: "150x70") %>
+      <h5 style="margin-top: -40px">2-Seaters</h5><br/>
+    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+      <h5>Tables available: <%= @two_seaters_free.count %> / <%= @two_seaters_total %></h5>
+    </div></div>
     </div>
 
-    <div style="text-align: center; float: left; width: 300px; height: 500px; margin-right: 20px; padding: 10px">
-      <p><%= image_tag("table2.jpg", size: "300x300") %></p>
-      <p><strong>4-Seaters</strong></p>
-      <p><%= @four_seaters_free.count  %> available / <%= @four_seaters_total %> total </p>
+    <div style="text-align: center; float: left; width: 300px; height: 450px; margin-right: 20px; padding: 10px">
+      <p><%= image_tag("table.png", size: "200x200") %></p>
+      <%= image_tag("splash.png", size: "150x70") %>
+      <h5 style="margin-top: -40px">4-Seaters</h5><br/>
+    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+      <h5>Tables available: <%= @four_seaters_free.count  %> / <%= @four_seaters_total %></h5>
+    </div></div>
     </div>
 
-    <div style="text-align: center; float: left; width: 300px; height: 500px; padding: 10px">
-      <p><%= image_tag("table.jpg", size: "300x300") %></p>
-      <p><strong>6-Seaters</strong></p>
-      <p><%= @six_seaters_free.count  %> available / <%= @six_seaters_total %> total </p>
+    <div style="text-align: center; float: left; width: 300px; height: 450px; padding: 10px">
+      <p><%= image_tag("table.png", size: "200x200") %></p>
+      <%= image_tag("splash.png", size: "150x70") %>
+      <h5 style="margin-top: -40px">6-Seaters</h5><br/>
+    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+      <h5>Tables available: <%= @six_seaters_free.count  %> / <%= @six_seaters_total %></h5>
+    </div></div>
     </div>
   </div>
 
 </div>
 </div>
 </div>
-
-<div style="height:100px"></div>
