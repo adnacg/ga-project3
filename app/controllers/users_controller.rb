@@ -10,7 +10,18 @@ class UsersController < ApplicationController
   before_action :check_user
 
   def index
-    @users = User.all
+    puts params[:search]
+    @users = User.search(params[:search])
+    @users_info = Hash.new
+    @users.each do |user|
+      total_tables = Table.where(user_id: user.id)
+      free_tables = total_tables.where(is_free: true)
+      @users_info[user.id] = {
+        name: user.name,
+        total_tables_count: total_tables.count,
+        free_tables_count: free_tables.count
+      }
+    end
   end
 
   def show
@@ -24,7 +35,7 @@ class UsersController < ApplicationController
     @six_seaters_total = @tables.where('seater': 6).count
 
     if current_patron
-      @is_favourite = @user.patrons.include?(current_patron)
+      @is_favourite = @user.favourite_patrons.include?(current_patron)
     end
   end
 

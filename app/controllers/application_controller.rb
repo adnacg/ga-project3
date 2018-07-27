@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
         if resource.class.name == "Patron"
             current_patron
         elsif resource.class.name == "User"
-            user_tables_url(user)
+            user_tables_url(current_user)
         end
     end
 end
