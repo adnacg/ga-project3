@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Crowded Or Not</title>
+    <title>Crowded Not</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,7 +22,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <%= link_to 'Home', root_url, method: :get, class: "navbar-brand" %>
+          <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand" %>
           <%= link_to 'Explore', users_url, method: :get, class: "nav-item nav-link" %>
 
           <% if !user_signed_in? && !patron_signed_in? %>
@@ -40,7 +41,29 @@
         </div>
       </div>
     </nav>
+    </div>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
+    <footer class="page-footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 py-3">
+            <div class="mb-4 flex-center">
+              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+            </div>
+            <p>© 2018 Copyright &nbsp;&nbsp;<a href="#">CrowdedNot</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

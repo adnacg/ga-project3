@@ -1,7 +1,7 @@
 // Place all the styles related to the patrons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.container {
+.wycontainer {
    display: flex;
    flex-direction: row;
    height: 600px;
@@ -14,6 +14,7 @@ h3 {
 }
 
 .wyparticular {
+   font-family: 'Oswald', sans-serif !important;
    padding-left: 10px;
    display: inline;
    align-self: center;
@@ -35,7 +36,6 @@ img {
    align-self: flex-start;
 }
 
-p {
-   margin: 0;
+.wybtns > form:nth-child(1) {
+   margin-bottom: 5px;
 }
-
