@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+ <%#--------------------------------- modal ----------------------------------------------------------------------%>
+
   <%# Sign in Modal %>
   <div id="modal-window-1" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -30,7 +33,7 @@
     </div>
   </div>
 
-  <%# Content %>
+  <%#-------------------------------- End of modal -----------------------------------------------------------------------%>
   <head>
     <title>Crowded Not</title>
     <%= csrf_meta_tags %>
@@ -42,83 +45,65 @@
   </head>
 
   <body>
+    <div class="container">
+      <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-light col-12">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+              
+                <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
+                <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
+
+                <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
+                <%if !current_page?(root_path) %>
+                  <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
+                  <div class="form-group">
+                    <%= form.text_field :search, class: "form-control", placeholder: "Search" %>
+                  </div>
+                    <%= form.submit 'Search', class: "btn btn-default" %>
+                  <% end %>
+                <% end %>
+
+                <%# Explore -------------------------------------------------------------------------------------------------------------------------------%>
+                <%= link_to 'Explore', users_url, method: :get, class: "nav-item nav-link" %>
+
+                <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
+                 <% if !user_signed_in? && !patron_signed_in? %>
+                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item nav-link" %>
+                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link" %>
+
+                <% elsif user_signed_in? %>
+                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item nav-link" %>
+                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item nav-link" %>
+
+                <% elsif patron_signed_in? %>
+                  <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link" %>
+                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item nav-link" %>
+                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item nav-link" %>
+                <% end %>
+              </div>
+          </nav>       
+      </div>
+    </div>
 
     <div class="container">
-    <div class="row">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="row">
+        <div class="col-md-12 py-3">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <% if notice %>
+          <div class="alert alert-info" role="alert"><%= notice %></div>
+        <% end %>
+        <% if alert %>
+          <div class="alert alert-danger" role="alert"><%= alert %></div>
+        <% end %>
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <%# Logo img %>
-            <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand" %>
-
-            <%# Search bar %>
-            <%if !current_page?(root_path) %>
-              <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
-                <div class="form-group">
-                <%= form.text_field :search, class: "form-control", placeholder: "Search" %>
-                </div>
-                <%= form.submit 'Search', class: "btn btn-default" %>
-              <% end %>
-            <% end %>
-
-            <%# show all %>
-            <%= link_to 'Explore', users_url, method: :get, class: "nav-item nav-link" %>
-
-
-            <% if !user_signed_in? && !patron_signed_in? %>
-              <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item nav-link" %>
-              <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link" %>
-
-
-            <% elsif user_signed_in? %>
-              <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item nav-link" %>
-              <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item nav-link" %>
-
-            <% elsif patron_signed_in? %>
-              <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link" %>
-              <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item nav-link" %>
-              <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item nav-link" %>
-            <% end %>
-            
-
-          </div>
-
-          <%# <form class="navbar-form navbar-right form-inline">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form> %>
-
-          </div>
-          </form>
-
-
+        <%= yield %>
         </div>
-
-      </nav>
-    </div>
-    </div>
-
-    <div class="container">
-    <div class="row">
-    <div class="col-md-12 py-3">
-
-    <% if notice %>
-      <div class="alert alert-info" role="alert"><%= notice %></div>
-    <% end %>
-    <% if alert %>
-      <div class="alert alert-danger" role="alert"><%= alert %></div>
-    <% end %>
-
-      <%= yield %>
-    </div>
-    </div>
+      </div>
     </div>
 
     <footer class="page-footer text-center">
