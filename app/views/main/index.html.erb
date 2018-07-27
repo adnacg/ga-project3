@@ -1,6 +1,49 @@
-<h1>Crowded Or Not?</h1>
+<%# Sign up Modal %>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">	
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign up as a Patron or a Restaurant?</h5>
+      </div>
+      <div class="modal-body">
+        <%= button_to "Patron", new_patron_registration_path, method: :get %>
+        <%= button_to "Restaurant", new_user_registration_path, method: :get %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h3>Sign Up Now</h3>
+<%# Sign in Modal %>
+<div id="modal-window-1" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">	
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign in as a Patron or a Restaurant?</h5>
+      </div>
+      <div class="modal-body">
+        <%= button_to "Patron", new_patron_session_path, method: :get %>
+        <%= button_to "Restaurant", new_user_session_path, method: :get %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p><%= link_to 'I Am A Restaurant', new_user_registration_url, method: :get %></p>
-<p><%= link_to 'I Am A Patron', new_patron_registration_url, method: :get %></p>
+<%# Main page %>
+<div class="container">
+  <div>
+    <h1>Looking for sits?</h1>
+
+    <%= form_tag("/search", method: "get") do %>
+      <%= text_field_tag(:q, nil, placeholder: 'Enter Location (e.g. Jurong East...)') %>
+      <br/>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <div class="showAllBtn">
+    <%= button_to "Show All", users_path, method: :get %>
+    </div>
+   
+  </div>
+</div>
+
+<%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: '#modal-window', toggle: 'modal' }, class: 'nav-link' %>
+<%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: '#modal-window-1', toggle: 'modal' }, class: 'nav-link' %>
