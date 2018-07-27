@@ -39,7 +39,6 @@
    margin: 0 auto;
 }
 
-
 .wyprofilepic {
    align-self: center;
 }
@@ -58,10 +57,45 @@
    border-bottom: 1px solid #AEADAE;
 }
 
-.wyEditTitle > h1 {
+
+.wyEditTitle, .wycontainer2 {
+   position: relative;
+   top: 4%;
+}
+
+.wyEditTitle {
    border-bottom: 1px solid #AEADAE;
 }
 
-.wyEditName {
-   padding-top: 10px;
+
+.wyEditPic {
+   position: relative;
+   height: 250px;
+   margin-right: 10px;
+   top: 8%;
+}
+
+.wyEditPic > button {
+   display: block;
+   margin: 10px auto 0 auto;
+}
+
+.wyEdit > label {
+   margin: 0;
+}
+
+.wyEdit > input {
+   margin-bottom: 15px;
+}
+
+.wyEditParticular {
+   position: relative;
+   top: 10%;
+}
+
+.wyEditSubmit input {
+   position: relative;
+   top: 10%;
+   right: 60%;
+   width: 200px;
 }

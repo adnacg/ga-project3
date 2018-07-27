@@ -1,19 +1,29 @@
-<div class="wycontainer">
+<h2 class="wyEditTitle">Edit your profile</h2>
+<div class="wycontainer wycontainer2">
 
-  <div class="wyEditTitle">
-    <h1>Edit your profile</h1>
+  <div class="wyEditPic">
     <%= image_tag 'profilepic.gif', class:"wyprofileimg2"%>
     <%= button_tag 'Upload Photo', class: "btn btn-info btn-sm"%>
   </div>
 
-  <div>
+  <div class="wyEditParticular">
     <%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
-      <p class="wyEditName">
+      <p class="wyEdit">
         <%= form.label :name %><br>
-        <%= form.text_area :name %>
+        <%= form.text_field :name %><br>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %>
       </p>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
       <p class="wyEditSubmit">
-        <%= form.submit %>
+        <%= form.submit 'SAVE', class:"btn btn-primary btn-sm" %>
       </p>
     <% end %>
   </div>
