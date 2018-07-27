@@ -1,7 +1,7 @@
 <div class="container swcontainer">
   <div>
     <h1>Looking for seats?</h1>
-
+    
     <%= form_tag("/search", method: "get") do %>
       <%= text_field_tag(:q, nil, placeholder: 'Enter Location (e.g. Jurong East...)') %>
       <br/>
@@ -10,6 +10,5 @@
     <div class="showAllBtn">
     <%= button_to "Show All", users_path, method: :get %>
     </div>
-   
   </div>
 </div>

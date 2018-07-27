@@ -1,5 +1,11 @@
 <h1>Your Favourite Restaurants</h1>
 
-<% @users.each do |user| %>
-  <%= link_to user.name, user_path(user) %></br>
-<% end %>
+<div class="container favContainer">
+<div class="row">
+  <% @users.each do |user| %>
+    <div class="col-sm-12  col-lg-4">
+      <%= link_to user.name, user_path(user) %></br>
+    </div>
+  <% end %>
+</div>
+</div>
