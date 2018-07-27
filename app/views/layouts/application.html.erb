@@ -54,16 +54,16 @@
     <div class="container">
       <div class="row">
           <nav class="navbar navbar-expand-lg navbar-light col-12">
-
+           
+            <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
+            <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
+ 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-              
-                <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
-                <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
-
+            
+              <div class="collapse navbar-collapse justify-content-end navbar-nav" id="navbarNavAltMarkup">
+                
                 <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
                 <%if !current_page?(root_path) %>
                   <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
@@ -75,21 +75,21 @@
                 <% end %>
 
                 <%# Explore -------------------------------------------------------------------------------------------------------------------------------%>
-                <%= link_to 'Explore', users_url, method: :get, class: "nav-item nav-link" %>
+                <%= link_to 'Explore', users_url, method: :get, class: "nav-item active nav-link" %>
 
                 <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
                  <% if !user_signed_in? && !patron_signed_in? %>
-                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item nav-link" %>
-                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link" %>
+                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link" %>
+                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn btn-outline-success my-2 my-sm-0" %>
 
                 <% elsif user_signed_in? %>
-                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item nav-link" %>
-                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item nav-link" %>
+                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link" %>
+                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link" %>
 
                 <% elsif patron_signed_in? %>
                   <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link" %>
-                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item nav-link" %>
-                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item nav-link" %>
+                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link" %>
+                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link" %>
                 <% end %>
               </div>
           </nav>       
