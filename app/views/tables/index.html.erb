@@ -1,31 +1,80 @@
-<h1>Welcome Back, <%= @user.name%></h1>
-<h3>My Profile</h3>
+<div class="container">
+<div class="row">
+<div class="col-sm">
 
 <div>
-  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
-    <h3>2-Seaters</h3>
-    <h3><%= @two_seaters_free_total  %> available / <%= @two_seaters_total %> total </h3>
-    <p><%= button_to 'Occupy A Table', table_update_path(current_user), method: :patch, params: {seater: 2, free: false} %></p>
-    <p><%= button_to 'Free A Table', table_update_path(current_user), method: :patch, params: {seater: 2, free: true} %></p>
-    <p><%= button_to 'Create A Table', user_tables_path(current_user), method: :post, params: {seater: 2, is_free: true} %></p>
-    <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 2} %></p>
-  </div>
-
-  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; margin-right: 20px; padding: 10px">
-    <h3>4-Seaters</h3>
-    <h3><%= @four_seaters_free_total  %> available / <%= @four_seaters_total %> total </h3>
-    <p><%= button_to 'Occupy A Table', table_update_path(@current_user), method: :patch, params: {seater: 4, free: false} %></p>
-    <p><%= button_to 'Free A Table', table_update_path(@current_user), method: :patch, params: {seater: 4, free: true} %></p>
-    <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 4, is_free: true} %></p>
-    <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 4} %></p>
-  </div>
-
-  <div style="text-align: center; border: 1px solid black; float: left; width: 300px; height: 300px; padding: 10px">
-    <h3>6-Seaters</h3>
-    <h3><%= @six_seaters_free_total  %> available / <%= @six_seaters_total %> total </h3>
-    <p><%= button_to 'Occupy A Table', table_update_path(@current_user), method: :patch, params: {seater: 6, free: false} %></p>
-    <p><%= button_to 'Free A Table', table_update_path(@current_user), method: :patch, params: {seater: 6, free: true} %></p>
-    <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 6, is_free: true} %></p>
-    <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 6} %></p>
-  </div>
+  <p>Welcome Back, <%= @user.name%></p>
+  <p><small>This is your dashboard to control your current table flow.</small></p>
 </div>
+
+  <div style="text-align: center; float: left; width: 300px; height: 600px; margin-right: 20px; padding: 10px">
+
+    <p><%= image_tag("table.jpg", size: "300x300") %></p>
+    <h5><strong>2-Seaters</strong></h5><br/>
+    <h5>Tables available: <%= @two_seaters_free_total  %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Occupy A Table', table_update_path(current_user), method: :patch, params: {seater: 2, free: false}, class:"btn btn-light" %></p>
+      <p><%= button_to 'Free A Table', table_update_path(current_user), method: :patch, params: {seater: 2, free: true}, class:"btn btn-light"  %></p>
+    </div>
+
+    <br/>
+    <h5>Total tables: <%= @two_seaters_total %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Create A Table', user_tables_path(current_user), method: :post, params: {seater: 2, is_free: true}, class:"btn btn-light"  %></p>
+      <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 2}, class:"btn btn-light"  %></p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; float: left; width: 300px; height: 600px; margin-right: 20px; padding: 10px">
+
+    <p><%= image_tag("table2.jpg", size: "300x300") %></p>
+    <h5><strong>4-Seaters</strong></h5><br/>
+    <h5>Tables available: <%= @four_seaters_free_total  %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Occupy A Table', table_update_path(@current_user), method: :patch, params: {seater: 4, free: false}, class:"btn btn-light"  %></p>
+      <p><%= button_to 'Free A Table', table_update_path(@current_user), method: :patch, params: {seater: 4, free: true}, class:"btn btn-light"  %></p>
+    </div>
+
+    <br/>
+    <h5>Total tables: <%= @four_seaters_total %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 4, is_free: true}, class:"btn btn-light"  %></p>
+      <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 4}, class:"btn btn-light"  %></p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; float: left; width: 300px; height: 600px; padding: 10px">
+
+    <p><%= image_tag("table.jpg", size: "300x300") %></p>
+    <h5><strong>6-Seaters</strong></h5><br/>
+    <h5>Tables available: <%= @six_seaters_free_total  %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Occupy A Table', table_update_path(@current_user), method: :patch, params: {seater: 6, free: false}, class:"btn btn-light"  %></p>
+      <p><%= button_to 'Free A Table', table_update_path(@current_user), method: :patch, params: {seater: 6, free: true}, class:"btn btn-light"  %></p>
+    </div>
+
+    <br/>
+    <h5>Total tables: <%= @six_seaters_total %></h5><br/>
+
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <p><%= button_to 'Create Table', user_tables_path(current_user), method: :post, params: {seater: 6, is_free: true}, class:"btn btn-light"  %></p>
+      <p><%= button_to 'Delete A Table', table_delete_path(current_user), method: :delete, params: {seater: 6}, class:"btn btn-light"  %></p>
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div style="height:100px"></div>
