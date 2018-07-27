@@ -20,3 +20,22 @@
 @import "patrons.scss";
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
+.modal-header{
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0px;
+}
+
+.patronbtn{
+  float: right;
+  position: relative;
+  left: -21%;
+  width: 110px;
+}
+
+.userbtn{
+  float: right;
+  position: relative;
+  left: -33%;
+  width: 110px;
+}

@@ -8,11 +8,11 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">	
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Patron or a Restaurant?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_session_path, method: :get %>
-          <%= button_to "Restaurant", new_user_session_path, method: :get %>
+          <%= button_to "Patron", new_patron_session_path, method: :get, class:"patronbtn" %>
+          <%= button_to "Restaurant", new_user_session_path, method: :get, class:"userbtn" %>
         </div>
       </div>
     </div>
@@ -23,11 +23,11 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">	
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign up as a Patron or a Restaurant?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_registration_path, method: :get %>
-          <%= button_to "Restaurant", new_user_registration_path, method: :get %>
+          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
+          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
         </div>
       </div>
     </div>
