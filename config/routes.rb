@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   delete '/patrons/:patron_id/favourites', to: 'favourites#destroy', as: 'favourite_delete'
 
+  get 'signups/modal', to: 'signups#modal', as: 'signup_modal'
+  get 'signins/modal', to: 'signins#modal', as: 'signin_modal'
 end

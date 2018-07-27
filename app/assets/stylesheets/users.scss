@@ -1,3 +1,32 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 550px;
+}
+
+.field {
+  display: block;
+  margin: 15px;
+}
+
+.field input{
+  width: 280px;
+}
+
+.actions input[type=submit] {
+  position: relative;
+  float: right;
+  left: -30%; 
+}
+
+.resetPassword input[type=submit] {
+  position: relative;
+  float: right;
+  left: -20%; 
+}
