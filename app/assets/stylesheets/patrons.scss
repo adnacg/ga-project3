@@ -27,12 +27,18 @@
    align-self: center;
 }
 
-.wyprofileimg {
+.wyprofileimg, .wyprofileimg2 {
    // display: block;
    // margin: 0 auto;
    border: 5px, solid;
    border-radius: 90px;
 }
+
+.wyprofileimg2 {
+   display: block;
+   margin: 0 auto;
+}
+
 
 .wyprofilepic {
    align-self: center;
@@ -50,4 +56,12 @@
    padding-bottom: 8px;
    margin-bottom: 16px;
    border-bottom: 1px solid #AEADAE;
+}
+
+.wyEditTitle > h1 {
+   border-bottom: 1px solid #AEADAE;
+}
+
+.wyEditName {
+   padding-top: 10px;
 }
