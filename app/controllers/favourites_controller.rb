@@ -11,7 +11,7 @@ class FavouritesController < ApplicationController
 
   def index
     patron = Patron.find(params[:patron_id])
-    @users = patron.users
+    @users = patron.favourite_users
   end
 
   def create

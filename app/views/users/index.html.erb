@@ -2,20 +2,31 @@
 <div class="row">
 <div class="col-sm">
 
-  <p>Check Out The Crowds At These Restaurants</p>
+  <p style="text-align:center">Check Out The Crowds At These Restaurants</p>
   <br/>
   <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Restaurants</th>
+        <th scope="col" style="text-align:right; width: 50%">Restaurants</th>
         <th scope="col">Availability</th>
       </tr>
     </thead>
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= link_to user.name, user_path(user) %></td>
-          <td>Available</td>
+          <td style="text-align:right"><%= link_to user.name, user_path(user) %></td>
+          <td>
+            <% if @users_info[user.id][:total_tables_count] == 0 %>
+              <p>No tables available currently.</p>
+            <% else %>
+              <%= @users_info[user.id][:free_tables_count] %> Tables Available
+              <% if @users_info[user.id][:free_tables_count].to_f / @users_info[user.id][:total_tables_count].to_f < 0.2 %>
+                <p class="small" style="color:red">Filling up fast!</p>
+              <% elsif  @users_info[user.id][:free_tables_count].to_f / @users_info[user.id][:total_tables_count].to_f < 0.5 %>
+                <p class="small" style="color:orange">More than half tables are taken!</p>
+              <% end %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
