@@ -1,5 +1,5 @@
 <h1>Your Favourite Restaurants</h1>
 
-<% @users.each do |user| %>
-  <%= link_to user.name, user_path(user) %></br>
-<% end %>
+  <% @users.each do |user| %>
+    <%= link_to user.name, user_path(user) %></br>
+  <% end %>
