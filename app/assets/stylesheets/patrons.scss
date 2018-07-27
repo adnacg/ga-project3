@@ -9,11 +9,6 @@
    justify-content: center;
 }
 
-.profile {
-   align-self: center;
-
-}
-
 .wyparticularh3 {
    display: inline;
 }
@@ -32,15 +27,20 @@
    border-radius: 90px;
 }
 
-.wyprofilepic {
+.wyprofile {
    align-self: center;
-   // justify-self: center;
 }
 
 .wybtns {
-   align-self: flex-start;
+   position: relative;
+   float: right;
+   left: -20%;
+   align-self: flex-end;
 }
 
-.wybtns > form:nth-child(1) {
-   margin-bottom: 5px;
+.wytitle {
+   width: 500px;
+   padding-bottom: 8px;
+   margin-bottom: 16px;
+   border-bottom: 1px solid grey;
 }
