@@ -3,12 +3,12 @@
     <h1 class="profile text-center">Profile</h1>
 
     <div class="wyprofilepic">
-      <%= image_tag 'profilepic.gif'%>
+      <%= image_tag 'profilepic.gif', class:"wyprofileimg"%>
     </div>
     
     <div class="wyparticular">
-      <h3 class="text-center">Name: <%= @patron.name %></h3><br>
-      <h3 class="text-center">Email: <%= @patron.email %></h3>
+      <h3 class="wyparticularh3 text-center">Name: <%= @patron.name %></h3><br>
+      <h3 class="wyparticularh3 text-center">Email: <%= @patron.email %></h3>
     </div>
 
     <div class="wybtns">
