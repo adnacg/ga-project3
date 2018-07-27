@@ -1,7 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.container {
+.swcontainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,16 +10,16 @@
   height: 550px;
 }
 
-.field {
+.swfield {
   display: block;
   margin: 15px;
 }
 
-.field input{
+.swfield input{
   width: 280px;
 }
 
-.actions input[type=submit] {
+.swactions input[type=submit] {
   position: relative;
   float: right;
   left: -30%; 

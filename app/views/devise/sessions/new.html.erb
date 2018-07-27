@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container swcontainer">
   <div>
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
+    <div class="field swfield">
       <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "Email"%>
     </div>
 
-    <div class="field">
+    <div class="field swfield">
       <%= f.password_field :password, autocomplete: "off" , placeholder: "Password" %>
     </div>
 
@@ -18,7 +18,7 @@
       </div>
     <% end -%>
 
-    <div class="actions">
+    <div class="actions swactions">
       <%= f.submit "Log in" %>
     </div>
   <% end %>
