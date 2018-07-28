@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 550px;
+  height: 500px;
 }
 
 .swfield {
@@ -101,4 +101,25 @@
 
 .tooltip-inner {
   background-color: #ac3b61;
+}
+
+.setupdiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ekseatersetupdiv {
+  text-align: center;
+  float: left;
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.eksubmitbtn {
+  background-color: #123c69;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
 }
