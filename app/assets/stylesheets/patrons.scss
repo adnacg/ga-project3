@@ -1,115 +1,123 @@
 // Place all the styles related to the patrons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profileinfodiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
 .wycontainer {
-   display: flex;
-   flex-direction: row;
-   height: 600px;
-   width: 100%;
-   justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  width: 100%;
+  justify-content: center;
 }
 
 .wyprofile {
-   display: block;
-   margin: 0 auto;
-   height: 300px;
-   position: relative;
-   left: 30%;
-   text-align: center;
+  //   display: block;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  left: 30%;
+  text-align: center;
 }
 
 .wyparticularh3 {
-   display: inline;
+  display: inline;
 }
 
 .wyparticular {
-   padding-left: 10px;
-   display: inline;
-   align-self: center;
+  padding-left: 10px;
+  display: inline;
+  align-self: center;
 }
 
-.wyprofileimg, .wyprofileimg2 {
-   // display: block;
-   // margin: 0 auto;
-   border: 5px, solid;
-   border-radius: 90px;
+.wyprofileimg,
+.wyprofileimg2 {
+  // display: block;
+  // margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 .wyprofileimg2 {
-   display: block;
-   margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .wyprofilepic {
-   align-self: center;
+  align-self: center;
 }
 
 .wybtns {
-   position: relative;
-   float: right;
-   left: -20%;
-   align-self: flex-end;
+  position: relative;
+  float: right;
+  left: -20%;
+  align-self: flex-end;
 }
 
 .wybtns .editBtn p {
-   margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .wybtns .editBtn .button_to {
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .wybtns .deleteBtn p {
-   margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .wytitle {
-   width: 500px;
-   padding-bottom: 8px;
-   margin-bottom: 16px;
-   border-bottom: 1px solid #AEADAE;
+  width: 500px;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #aeadae;
 }
 
-
-.wyEditTitle, .wycontainer2 {
-   position: relative;
-   top: 4%;
+.wyEditTitle,
+.wycontainer2 {
+  position: relative;
+  top: 4%;
 }
 
 .wyEditTitle {
-   border-bottom: 1px solid #AEADAE;
+  border-bottom: 1px solid #aeadae;
 }
 
-
 .wyEditPic {
-   position: relative;
-   height: 250px;
-   margin-right: 10px;
-   top: 8%;
+  position: relative;
+  height: 250px;
+  margin-right: 10px;
+  top: 8%;
 }
 
 .wyEditPic > button {
-   display: block;
-   margin: 10px auto 0 auto;
-   
+  display: block;
+  margin: 10px auto 0 auto;
 }
 
 .wyEdit > label {
-   margin: 0;
+  margin: 0;
 }
 
 .wyEdit > input {
-   margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .wyEditParticular {
-   position: relative;
-   top: 10%;
+  position: relative;
+  top: 10%;
 }
 
 .wyEditSubmit input {
-   position: relative;
-   top: 10%;
-   right: 60%;
-   width: 200px;
+  position: relative;
+  top: 10%;
+  right: 60%;
+  width: 200px;
 }

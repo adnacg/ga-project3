@@ -1,16 +1,20 @@
-<div class="wycontainer">
-    <div class="wyprofile">
-      <div class="wyprofilepic">
-        <h1 class="text-center">Profile</h1>
-        <%= image_tag 'profilepic.gif', class:"wyprofileimg"%>
-      </div>
-        
-      <div class="wyparticular">
-        <h3 class="wyparticularh3 text-center">Name: <%= @patron.name %></h3><br>
-        <h3 class="wyparticularh3 text-center">Email: <%= @patron.email %></h3>
-      </div>
-    </div>
+<div class="container table-index-container">
+<div class="row">
+<div class="col-sm">
 
+  <div class="ektitle ektitlediv">
+    Profile
+  </div>
+
+  <div class="profileinfodiv">
+    <div><%= image_tag 'profilepic.png', class:"wyprofileimg"%></div>
+    <br>
+    <p><strong>Name: </strong><%= @patron.name %></p>
+    <p><strong>Email: </strong><%= @patron.email %></p>
+  </div>
+
+
+<div class="wycontainer">
     <div class="wybtns">
       <div class="editBtn">
         <h3 class="wytitle">Edit Profile</h3>
@@ -24,4 +28,11 @@
         <%= button_to 'Delete Profile', patron_path(current_patron), method: :delete, class: "btn btn-outline-danger btn-sm", data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
+</div>
+
+
+
+
+</div>
+</div>
 </div>
