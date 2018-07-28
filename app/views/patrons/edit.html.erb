@@ -9,16 +9,12 @@
   <div class="profileinfodiv">
     <%= image_tag 'profilepic.png', class:"wyprofileimg"%>
     <br/>
-    <p><%= button_tag 'Upload Photo', class: "btn btn-info btn-sm"%></p>
+    <p><%= button_tag 'Upload Photo', class: "btn btn-sm buttonTo"%></p>
   </div>
 
-
-
-
-
-  <div>
+  <div class="wyEditForm">
     <%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
-      <p class="wyEdit">
+      <p>
         <%= form.label :name %><br>
         <%= form.text_field :name %><br>
         <%= form.label :email %><br>
