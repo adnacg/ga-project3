@@ -77,7 +77,6 @@ nav a {
   position: relative;
   left: -43%;
 }
-<<<<<<< HEAD
 
 body {
   background-image: url("wallbg.jpeg");
@@ -95,6 +94,10 @@ body {
 
 .collapse {
   margin-right: 10%;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #eee2dc;
 }
 
 @media (max-width: 768px) {
