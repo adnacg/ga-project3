@@ -1,43 +1,88 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container" style="display: flex; justify-content: center;">
+<div class="row">
+<div class="col-sm">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<%= link_to 'keyboard_return', :back, class:"material-icons returnicon" %>
+<%= link_to 'Return', :back, class:"returnicon returnword" %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="ektitle ektitlediv">
+  Update Your Profile
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<div class="profilephotodiv leftprofilediv">
+  <p><%= image_tag 'cardboard_bg.jpg', size: "286x220"%></p>
+  <br/>
+  <p><%= button_tag 'Upload Restaurant\'s Photo', class: "btn btn-sm ekthemebtn"%></p>
+
+  <div class="separator"></div>
+
+  <p><strong>Cancel My Account</strong></p>
+  <%= button_to "Cancel my account now", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn ekcancelbtn btn-sm" %></p>
+
+</div>
+
+<div class="ekedituserdiv">
+<div class="ekedituserinnerdiv">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="field">
+      <strong><%= f.label :name %></strong><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+
+    <br/>
+    <div class="field">
+      <strong><%= f.label :email %></strong><br />
+      <%= f.email_field :email, autocomplete: "email" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <br/>
+    <div class="field">
+      <strong><%= f.label :current_password %></strong><br/>
+      <%= f.password_field :current_password, autocomplete: "off" %><br/>
+      <em class="hintmsg">(we need your current password to confirm your changes)</em>
+    </div>
+
+    <br/>
+    <div class="field">
+      <strong><%= f.label :password, 'New Password' %></strong><br/>
+      <%= f.password_field :password, autocomplete: "off" %>
+      <% if @minimum_password_length %>
+        <br />
+        <em class="hintmsg"><%= @minimum_password_length %> characters minimum</em><br/>
+        <em class="hintmsg"> (leave blank if unchanged)</em>
+        <br/>
+
+      <% end %>
+    </div>
+
+    <br/>
+    <div class="field">
+      <strong><%= f.label :password_confirmation, 'New Password Confirmation' %></strong><br/>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <em class="hintmsg"> (leave blank if unchanged)</em>
+    </div>
+
+    <br/>
+
+    <div class="actions">
+      <%= f.submit "Update", class:"btn btn-sm ekthemebtn" %>
+    </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+  <br/>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+</div>
+</div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+<div style="height:100px"></div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
+</div>
+</div>
