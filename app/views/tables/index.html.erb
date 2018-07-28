@@ -14,16 +14,16 @@
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="2_seater_free_tables">Tables available: <%= @two_seaters_free_total  %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 2, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38")%></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 2, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 2, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 2, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
 
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="2_seater_total_tables">Total tables: <%= @two_seaters_total %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 2, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 2), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 2, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 2), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
   </div>
@@ -35,16 +35,16 @@
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="4_seater_free_tables">Tables available: <%= @four_seaters_free_total  %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 4, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38")%></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 4, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 4, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 4, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
 
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="4_seater_total_tables">Total tables: <%= @four_seaters_total %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 4, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 4), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 4, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 4), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
   </div>
@@ -56,16 +56,16 @@
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="6_seater_free_tables">Tables available: <%= @six_seaters_free_total  %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 6, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38")%></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 6, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 6, free: true), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 6, free: false), remote: true, method: :patch, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
 
     <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
       <h5 id="6_seater_total_tables">Total tables: <%= @six_seaters_total %></h5><br/>
       <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
-        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 6, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>&nbsp;&nbsp;&nbsp;
-        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 6), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;<%= image_tag("tablemini.png", size: "38x38") %></p>
+        <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 6, is_free: true), remote: true, method: :post, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
+        <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 6), remote: true, method: :delete, class:"btn btn-light" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
     </div></div><br/>
   </div>
