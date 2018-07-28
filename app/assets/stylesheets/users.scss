@@ -51,14 +51,14 @@
 }
 
 .ekusercard {
-  background-color: #eee2dc;
+  background-image: url("wallbg.jpg");
   border: 1px solid transparent;
   margin: 20px;
 }
 
 .ekcardimg {
   height: 220px;
-  border: 1px solid #000;
+  // border: 1px so;
 }
 
 .booknowbtn {
@@ -73,10 +73,32 @@
   float: left;
 }
 
+.returnword {
+  float: left;
+  font-size: 0.8rem;
+}
+
+.favtitle {
+  margin: inherit;
+  margin-bottom: inherit;
+}
+
 .favouritebtn {
   background-color: transparent;
   border: none;
   width: 30px;
   height: 30px;
   color: #ac3b61;
+  display: flex;
+  justify-content: center;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip-inner {
+  background-color: #ac3b61;
 }
