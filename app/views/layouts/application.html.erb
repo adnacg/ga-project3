@@ -6,7 +6,7 @@
   <%# Sign in Modal %>
   <div id="modal-window-1" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">	
+      <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a patron?</h5>
         </div>
@@ -21,7 +21,7 @@
   <%# Sign up Modal %>
   <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">	
+      <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
         </div>
@@ -54,17 +54,17 @@
             </button>
 
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-              
+
                 <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
                 <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
 
                 <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
                 <%if !current_page?(root_path) %>
-                  <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
+                  <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline eksearch", local: true do |form| %>
                   <div class="form-group">
-                    <%= form.text_field :search, class: "form-control", placeholder: "Search" %>
+                    <%= form.text_field :search, class: "form-control", placeholder: "Search..." %>
                   </div>
-                    <%= form.submit 'Search', class: "btn btn-default" %>
+                    <%# <%= form.submit 'Search', class: "btn btn-default" %>
                   <% end %>
                 <% end %>
 
@@ -86,7 +86,7 @@
                   <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item nav-link" %>
                 <% end %>
               </div>
-          </nav>       
+          </nav>
       </div>
     </div>
 

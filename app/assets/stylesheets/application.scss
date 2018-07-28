@@ -20,20 +20,49 @@
 @import "patrons.scss";
 @import "favourites.scss";
 
-.modal-header{
+body {
+  background-color: #eee2dc;
+  color: #123c69;
+}
+
+a {
+  text-decoration: none;
+  color: #ac3b61;
+}
+
+footer a {
+  color: #123c69;
+}
+
+a:hover,
+i:hover {
+  text-decoration: none;
+  color: #ac3b61;
+}
+
+nav a {
+  color: #123c69;
+}
+
+.form-inline .form-control {
+  background-color: #eee2dc;
+  border: 1px solid #123c69;
+}
+
+.modal-header {
   align-items: center;
   justify-content: center;
   border-bottom: 0px;
 }
 
-.patronbtn{
+.patronbtn {
   float: right;
   position: relative;
   left: -21%;
   width: 110px;
 }
 
-.userbtn{
+.userbtn {
   float: right;
   position: relative;
   left: -33%;
