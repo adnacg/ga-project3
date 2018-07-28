@@ -1,17 +1,26 @@
-<h1>Your Favourite Restaurants</h1>
-
-<div class="container wyfavContainer">
+<div class="container table-index-container">
 <div class="row">
+<div class="col-sm">
+
+<div class="ektitle ektitlediv">
+  <p>Your Favourite Restaurants</p>
+</div>
+
+<div class="userindexdiv">
   <% @users.each do |user| %>
-    <div class="col-sm-12  col-lg-4">
-      <h2><%= user.name%></h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-      Quis, reiciendis deserunt cupiditate 
-      rem a necessitatibus consectetur autem 
-      similique quam nihil voluptatibus natus commodi harum 
-      totam sapiente dolor in aspernatur distinctio.</p>
-      <%= link_to 'View Details »', user_path(user), class:"wy btn btn-secondary" %></br>
+    <div class="card ekusercard" style="width: 18rem;">
+    <%= image_tag("fooduser.png", class:"card-img-top ekcardimg") %>
+      <div class="card-body">
+        <h5 class="card-title"><%= user.name %></h5>
+        <div class="detaildiv">
+          <%= image_tag("splashsm.png", size: "100x35") %>
+          <%= link_to 'Details', user_path(user), class: "btn btn-sm ekdetailbtn" %>
+        </div><br/>
+      </div>
     </div>
   <% end %>
+</div>
+
+</div>
 </div>
 </div>

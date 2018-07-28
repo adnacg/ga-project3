@@ -17,6 +17,7 @@
 @import "bootstrap";
 @import "main.scss";
 @import "users.scss";
+@import "tables.scss";
 @import "patrons.scss";
 @import "favourites.scss";
 
@@ -27,7 +28,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ac3b61;
+  color: #123c69;
 }
 
 footer a {
@@ -47,6 +48,7 @@ nav a {
 .form-inline .form-control {
   background-color: #eee2dc;
   border: 1px solid #123c69;
+  width: 150px;
 }
 
 .modal-header {
@@ -68,3 +70,14 @@ nav a {
   left: -33%;
   width: 110px;
 }
+
+.modal_img{
+  float: right;
+  position: relative;
+  left: -43%;
+}
+
+body{
+  background-image: url("wallbg.jpeg");
+}
+

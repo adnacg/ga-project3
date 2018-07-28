@@ -1,26 +1,25 @@
-<div class="container" style="display: flex; justify-content: center; background-color: #EEE2DC; color: #123C69;">
+<div class="container table-index-container">
 <div class="row">
 <div class="col-sm">
 
-  <p style="text-align:center; margin-top: 50px; font-weight: bold; font-size: 20px">Check Out The Crowds At These Restaurants</p>
-  <br/>
+  <div class="ektitle ektitlediv">
+  <p>Check Out The Crowds At These Restaurants</p>
+  </div>
 
-  <p><%= image_tag("food.png", size: "1000x150") %></p>
-
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col" style="text-align:right; width: 50%">Restaurants</th>
-        <th scope="col">Availability</th>
-      </tr>
-    </thead>
-    <tbody>
+    <div class="userindexdiv">
       <% @users.each do |user| %>
-        <tr>
-          <td style="text-align:right"><%= link_to user.name, user_path(user) %></td>
-          <td>
+        <div class="card ekusercard" style="width: 18rem;">
+          <%= image_tag("fooduser.png", class:"card-img-top ekcardimg") %>
+          <div class="card-body">
+            <h5 class="card-title"><%= user.name %></h5>
+
+            <div class="detaildiv">
+            <%= image_tag("splashsm.png", size: "100x35") %>
+            <%= link_to 'Details', user_path(user), class: "btn btn-sm ekdetailbtn" %>
+            </div><br/>
+
             <% if @users_info[user.id][:total_tables_count] == 0 %>
-              <p>No tables available currently.</p>
+              <p class="card-text">No tables available currently.</p>
             <% else %>
               <%= @users_info[user.id][:free_tables_count] %> Tables Available
               <% if @users_info[user.id][:free_tables_count].to_f / @users_info[user.id][:total_tables_count].to_f < 0.2 %>
@@ -29,11 +28,11 @@
                 <p class="small" style="color:orange"><strong>More than half tables are taken!</strong></p>
               <% end %>
             <% end %>
-          </td>
-        </tr>
+
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
 
 </div>
 </div>
