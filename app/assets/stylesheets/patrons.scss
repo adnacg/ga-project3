@@ -11,9 +11,10 @@
 .wycontainer {
   display: flex;
   flex-direction: row;
-  height: 600px;
+  height: 300px;
   width: 100%;
-  justify-content: center;
+  // justify-content: center;
+
 }
 
 .wyprofile {
@@ -42,39 +43,48 @@
   width: 200px;
 }
 
-.wyprofileimg2 {
-  display: block;
-  margin: 0 auto;
-}
-
 .wyprofilepic {
   align-self: center;
-}
-
-.wybtns {
-  position: relative;
-  float: right;
-  left: -20%;
-  align-self: flex-end;
 }
 
 .wybtns .editBtn p {
   margin-bottom: 8px;
 }
 
-.wybtns .editBtn .button_to {
-  margin-bottom: 20px;
-}
-
 .wybtns .deleteBtn p {
   margin-bottom: 8px;
 }
 
-.wytitle {
-  width: 500px;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #aeadae;
+.buttonTo {
+  background: #123c69;
+  color: white;
+}
+
+.buttonTo:hover {
+  background: white;
+  color: #123c69;
+  border-color: #123c69
+}
+
+.wyEditForm {
+  text-align: center;
+}
+
+.wyEditForm label {
+  float: left;
+  margin-left: 10%;
+}
+
+.wyEditForm input {
+  margin-bottom: 6px;
+}
+
+.wyEditForm p label:nth-child(odd) {
+  margin-bottom: 4px;
+}
+
+.wyEditForm p label:nth-child(3) {
+  margin-top: 6px;
 }
 
 .wyEditTitle,
@@ -94,11 +104,6 @@
   top: 8%;
 }
 
-.wyEditPic > button {
-  display: block;
-  margin: 10px auto 0 auto;
-}
-
 .wyEdit > label {
   margin: 0;
 }
@@ -112,4 +117,13 @@
   top: 10%;
   right: 60%;
   width: 200px;
+}
+
+.wytitle {
+  border-bottom: 1px solid #AEADAE
+}
+
+.delete {
+  color: red;
+  margin-top: 6%;
 }

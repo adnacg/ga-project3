@@ -1,18 +1,25 @@
-<div class="container" style="display: flex; justify-content: center; background-color: #EEE2DC; color: #123C69;">
+<div class="container" style="display: flex; justify-content: center;">
 <div class="row">
 <div class="col-sm">
 
   <div class="ektitle ektitlediv">
-    <%= link_to 'keyboard_return', users_path, class:"material-icons returnicon" %>
-    <p>Tables available at <%= @user.name %></p>
 
-    <% if patron_signed_in? %>
-      <% if @is_favourite %>
-        <%= button_to 'favorite', favourite_delete_path(current_patron), method: :delete, params: { user_id: @user.id }, class:"favouritebtn material-icons"%>
-      <% else %>
-        <%= button_to 'favorite_border', patron_favourites_path(current_patron), method: :post, params: { user_id: @user.id }, class:"favouritebtn material-icons" %>
-      <% end %>
-    <% end %>
+    <p>
+      <%= link_to 'keyboard_return', users_path, class:"material-icons returnicon" %>
+      <%= link_to 'Return', users_path, class:"returnicon returnword" %>
+      <div class="flexcenter">
+        <p class="favtitle">
+          <%= @user.name %>
+          <% if patron_signed_in? %>
+            <% if @is_favourite %>
+              &nbsp;<%= button_to 'favorite', favourite_delete_path(current_patron), method: :delete, params: { user_id: @user.id }, class:"favouritebtn material-icons ektooltip", data: {toggle: "tooltip", placement: "top" }, title: "Remove From Favourites!" %>
+            <% else %>
+              &nbsp;<%= button_to 'favorite_border', patron_favourites_path(current_patron), method: :post, params: { user_id: @user.id }, class:"favouritebtn material-icons ektooltip", data: {toggle: "tooltip", placement: "top" }, title: "Add To Favourites!" %>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </p>
 
   </div>
 
@@ -21,7 +28,7 @@
       <p><%= image_tag("table.png", size: "200x200") %></p>
       <%= image_tag("splash.png", size: "150x70") %>
       <h5 style="margin-top: -40px">2-Seaters</h5><br/>
-    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+    <div class="card" style="background: transparent; border: 1px solid #AC3B61;"><div class="card-body">
       <h5>Tables available: <%= @two_seaters_free.count %> / <%= @two_seaters_total %></h5>
     </div></div>
     </div>
@@ -30,7 +37,7 @@
       <p><%= image_tag("table.png", size: "200x200") %></p>
       <%= image_tag("splash.png", size: "150x70") %>
       <h5 style="margin-top: -40px">4-Seaters</h5><br/>
-    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+    <div class="card" style="background: transparent; border: 1px solid #AC3B61;"><div class="card-body">
       <h5>Tables available: <%= @four_seaters_free.count  %> / <%= @four_seaters_total %></h5>
     </div></div>
     </div>
@@ -39,7 +46,7 @@
       <p><%= image_tag("table.png", size: "200x200") %></p>
       <%= image_tag("splash.png", size: "150x70") %>
       <h5 style="margin-top: -40px">6-Seaters</h5><br/>
-    <div class="card" style="background-color: #EEE2DC; border: 1px solid #AC3B61;"><div class="card-body">
+    <div class="card" style="background: transparent; border: 1px solid #AC3B61;"><div class="card-body">
       <h5>Tables available: <%= @six_seaters_free.count  %> / <%= @six_seaters_total %></h5>
     </div></div>
     </div>
