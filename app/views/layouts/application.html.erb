@@ -56,13 +56,14 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
                 <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
+                <%= image_tag("logo.svg", size: "100x50")%>
                 <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
 
                 <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
                 <%if !current_page?(root_path) %>
                   <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline eksearch", local: true do |form| %>
                   <div class="form-group">
-                    <%= form.text_field :search, class: "form-control", placeholder: "Search..." %>
+                    <%= form.text_field :search, class: "form-control", placeholder: "search" %>
                   </div>
                     <%# <%= form.submit 'Search', class: "btn btn-default" %>
                   <% end %>

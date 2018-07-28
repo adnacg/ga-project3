@@ -60,3 +60,23 @@
   height: 220px;
   border: 1px solid #000;
 }
+
+.booknowbtn {
+  margin-left: -65px;
+}
+
+.booknowbtn:hover {
+  font-size: 105%;
+}
+
+.returnicon {
+  float: left;
+}
+
+.favouritebtn {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  color: #ac3b61;
+}
