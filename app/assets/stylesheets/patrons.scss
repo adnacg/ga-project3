@@ -61,7 +61,7 @@
 }
 
 .buttonTo:hover {
-  background: #c3d9ec;
+  background: white;
   color: #123c69;
   border-color: #123c69
 }
@@ -86,7 +86,6 @@
 .wyEditForm p label:nth-child(3) {
   margin-top: 6px;
 }
-
 
 .wyEditTitle,
 .wycontainer2 {
@@ -118,4 +117,13 @@
   top: 10%;
   right: 60%;
   width: 200px;
+}
+
+.wytitle {
+  border-bottom: 1px solid #AEADAE
+}
+
+.delete {
+  color: red;
+  margin-top: 6%;
 }
