@@ -42,7 +42,7 @@ i:hover {
 }
 
 nav a {
-  color: #123c69;
+  color: #ffffff;
 }
 
 .form-inline .form-control {
@@ -77,7 +77,26 @@ nav a {
   left: -43%;
 }
 
-body{
+body {
   background-image: url("wallbg.jpeg");
 }
 
+/* navbar */
+.navbar {
+  background-color: #123c69;
+  border-color: #123c69;
+}
+
+.navbar-brand {
+  margin-left: 10%;
+}
+
+.collapse {
+  margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 1%;
+  }
+}

@@ -1,14 +1,14 @@
 <div class="container swcontainer">
-  <div>
+  <div class="slide1">
     <h1>Looking for seats?</h1>
     
-    <%= form_tag("/search", method: "get") do %>
-      <%= text_field_tag(:q, nil, placeholder: 'Enter Location (e.g. Jurong East...)') %>
+    <%= form_with url: users_path, method: :get, local: true do |form| %>
+      <%= form.text_field :search, class: "form-control", placeholder: "Enter a Restaurant Name" %>
       <br/>
-      <%= submit_tag("Search") %>
+      <%= form.submit "Search", class: "btn btn-default" =%>
     <% end %>
     <div class="showAllBtn">
-    <%= button_to "Show All", users_path, method: :get %>
+    <%= button_to "Show All", users_path, method: :get, class: "btn btn-default" %>
     </div>
   </div>
 </div>

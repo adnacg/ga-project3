@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   before_action :check_user
 
   def index
-    puts params[:search]
     @users = User.search(params[:search])
     @users_info = Hash.new
     @users.each do |user|
