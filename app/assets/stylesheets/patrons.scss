@@ -35,10 +35,7 @@
   align-self: center;
 }
 
-.wyprofileimg,
-.wyprofileimg2 {
-  // display: block;
-  // margin: 0 auto;
+.wyprofileimg {
   border: 1px solid #000;
   border-radius: 50%;
   height: 200px;
@@ -108,11 +105,6 @@
 
 .wyEdit > input {
   margin-bottom: 15px;
-}
-
-.wyEditParticular {
-  position: relative;
-  top: 10%;
 }
 
 .wyEditSubmit input {
