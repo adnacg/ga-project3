@@ -1,10 +1,17 @@
 <h1>Your Favourite Restaurants</h1>
 
-<div class="container favContainer">
+<div class="container wyfavContainer">
 <div class="row">
   <% @users.each do |user| %>
     <div class="col-sm-12  col-lg-4">
-      <%= link_to user.name, user_path(user) %></br>
+      <h2><%= user.name%></h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Quis, reiciendis deserunt cupiditate 
+      rem a necessitatibus consectetur autem 
+      similique quam nihil voluptatibus natus commodi harum 
+      totam sapiente dolor in aspernatur distinctio.</p>
+      <%= link_to 'View Details »', user_path(user), class:"wy btn btn-secondary" %></br>
+      <%# <a class="btn btn-secondary" href="#" role="button">View details »</a> %>
     </div>
   <% end %>
 </div>
