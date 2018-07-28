@@ -15,18 +15,68 @@
   margin: 15px;
 }
 
-.swfield input{
+.swfield input {
   width: 280px;
 }
 
-.swactions input[type=submit] {
+.swactions input[type="submit"] {
   position: relative;
   float: right;
-  left: -30%; 
+  left: -30%;
 }
 
-.resetPassword input[type=submit] {
+.resetPassword input[type="submit"] {
   position: relative;
   float: right;
-  left: -20%; 
+  left: -20%;
+}
+
+.detaildiv {
+  margin-left: -20px;
+}
+
+.ekdetailbtn {
+  margin-left: -65px;
+}
+
+.ekdetailbtn:hover {
+  font-size: 105%;
+}
+
+.userindexdiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.ekusercard {
+  background-color: #eee2dc;
+  border: 1px solid transparent;
+  margin: 20px;
+}
+
+.ekcardimg {
+  height: 220px;
+  border: 1px solid #000;
+}
+
+.booknowbtn {
+  margin-left: -65px;
+}
+
+.booknowbtn:hover {
+  font-size: 105%;
+}
+
+.returnicon {
+  float: left;
+}
+
+.favouritebtn {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  color: #ac3b61;
 }
