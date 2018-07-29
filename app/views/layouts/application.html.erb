@@ -83,6 +83,7 @@
 
                 <% elsif user_signed_in? %>
                   <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link" %>
+                  <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link" %>
                   <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link" %>
 
                 <% elsif patron_signed_in? %>

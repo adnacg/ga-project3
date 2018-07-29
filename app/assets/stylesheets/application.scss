@@ -43,7 +43,12 @@ i:hover {
 }
 
 nav a {
-  color: #ffffff;
+  color: #eee2dc;
+}
+
+nav a:hover {
+  color: #eee2dc;
+  text-shadow: 2px 2px 8px #edc7b7;
 }
 
 .form-inline .form-control {

@@ -152,7 +152,7 @@
 }
 
 .ekedituserinnerdiv {
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .hintmsg {
@@ -168,4 +168,13 @@
 .ekcancelbtn:hover {
   background-color: #aa3d61;
   color: #eee2dc;
+}
+
+.themeprofileinput {
+  width: 200px;
+  text-align: left;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
