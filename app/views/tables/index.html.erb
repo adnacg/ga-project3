@@ -8,20 +8,23 @@
 </div>
 
   <div class="ekseaterdiv">
-    <p><%= image_tag("table.png", size: "200x200") %></p>
-    <%= image_tag("splash.png", size: "150x70") %>
-    <h5 class="ekseatertype">2-Seaters</h5><br/>
+    <p><%= image_tag("2seaterv2.png", size: "200x200") %></p>
+
+    <div>
+      <%= image_tag("splash.png", size: "150x70") %>
+      <h5 class="ekseatertype">2-Seaters</h5><br/>
+    </div>
 
     <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="2_seater_free_tables">Tables available: <%= @two_seaters_free_total  %></h5><br/>
+      <h5 id="2_seater_free_tables">AVAILABLE: <%= @two_seaters_free_total  %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 2, free: true), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 2, free: false), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
-    </div></div><br/>
 
-    <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="2_seater_total_tables">Total tables: <%= @two_seaters_total %></h5><br/>
+      <div class="separator"></div>
+
+      <h5 id="2_seater_total_tables">TOTAL: <%= @two_seaters_total %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 2, is_free: true), remote: true, method: :post, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 2), remote: true, method: :delete, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>
@@ -30,20 +33,20 @@
   </div>
 
   <div class="ekseaterdiv">
-    <p><%= image_tag("table.png", size: "200x200") %></p>
+    <p><%= image_tag("4seater.png", size: "200x200") %></p>
     <%= image_tag("splash.png", size: "150x70") %>
     <h5 class="ekseatertype">4-Seaters</h5><br/>
 
     <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="4_seater_free_tables">Tables available: <%= @four_seaters_free_total  %></h5><br/>
+      <h5 id="4_seater_free_tables">AVAILABLE: <%= @four_seaters_free_total  %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 4, free: true), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 4, free: false), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
-    </div></div><br/>
 
-    <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="4_seater_total_tables">Total tables: <%= @four_seaters_total %></h5><br/>
+      <div class="separator"></div>
+
+      <h5 id="4_seater_total_tables">TOTAL: <%= @four_seaters_total %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 4, is_free: true), remote: true, method: :post, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 4), remote: true, method: :delete, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>
@@ -52,20 +55,20 @@
   </div>
 
   <div class="ekseaterdiv">
-    <p><%= image_tag("table.png", size: "200x200") %></p>
+    <p><%= image_tag("6seater.png", size: "200x200") %></p>
     <%= image_tag("splash.png", size: "150x70") %>
 
     <h5 class="ekseatertype">6-Seaters</h5><br/>
     <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="6_seater_free_tables">Tables available: <%= @six_seaters_free_total  %></h5><br/>
+      <h5 id="6_seater_free_tables">AVAILABLE: <%= @six_seaters_free_total  %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', table_update_path(user_id: current_user.id, seater: 6, free: true), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_update_path(user_id: current_user.id, seater: 6, free: false), remote: true, method: :patch, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>
       </div>
-    </div></div><br/>
 
-    <div class="card ekcarddiv"><div class="card-body">
-      <h5 id="6_seater_total_tables">Total tables: <%= @six_seaters_total %></h5><br/>
+      <div class="separator"></div>
+
+      <h5 id="6_seater_total_tables">TOTAL: <%= @six_seaters_total %></h5><br/>
       <div class="ekadjustbtn">
         <p><%= link_to '+', user_tables_path(user_id: current_user.id, seater: 6, is_free: true), remote: true, method: :post, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>&nbsp;&nbsp;&nbsp;
         <p><%= link_to '-', table_delete_path(user_id: current_user.id, seater: 6), remote: true, method: :delete, class:"btn btn-light adjustbtn" %>&nbsp;&nbsp;&nbsp;</p>

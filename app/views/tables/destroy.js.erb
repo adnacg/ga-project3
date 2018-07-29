@@ -1,6 +1,6 @@
 <% if @error %>
     alert('All your tables are taken at the moment!\nOnly available tables can be removed.\nPlease free a table if you want to remove it.')
 <% else %>
-    $("#<%= @totalCountElementId %>").text("Total tables: <%= @total_tables_count %>");
-    $("#<%= @freeCountElementId %>").text("Tables available: <%= @free_tables_count %>");
+    $("#<%= @totalCountElementId %>").text("TOTAL: <%= @total_tables_count %>");
+    $("#<%= @freeCountElementId %>").text("AVAILABLE: <%= @free_tables_count %>");
 <% end %>

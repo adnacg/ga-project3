@@ -9,7 +9,7 @@
     <div class="userindexdiv">
       <% @users.each do |user| %>
         <div class="card ekusercard" style="width: 18rem;">
-          <%= image_tag("cardboard_bg.jpg", class:"card-img-top ekcardimg") %>
+          <%= link_to image_tag("cardboard_bg.jpg", class:"card-img-top ekcardimg"), user_path(user) %>
           <div class="card-body">
             <h5 class="card-title"><%= user.name %></h5>
 

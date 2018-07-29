@@ -7,19 +7,19 @@
     <%= devise_error_messages! %>
 
     <div class="field swfield">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"btn btn-sm themeprofileinput disabled" %>
     </div>
 
     <div class="field swfield">
-      <%= f.password_field :password, autocomplete: "off", placeholder: "Password (6 characters minimum)" %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password (6 characters minimum)", class:"btn btn-sm themeprofileinput disabled" %>
     </div>
 
     <div class="field swfield">
-      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password confirmation" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password confirmation", class:"btn btn-sm themeprofileinput disabled" %>
     </div>
 
     <div class="actions swactions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", class: "btn btn-sm ekthemebtn" %>
     </div>
   <% end %>
   <br />
