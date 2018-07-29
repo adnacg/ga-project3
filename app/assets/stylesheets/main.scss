@@ -7,34 +7,63 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 1200px;
+  height: 100%;
 }
 
-.swcontainer input[type=text]{
+.indexform {
+  display: initial;
+}
+
+.swform-control {
+  margin-left: -22%;
+}
+
+.swcontainer input[type=text] {
   margin: 20px;
   width: 600px;
   height: 50px;
   font-size: 32px; 
 }
 
-.swcontainer input[type=submit]{
-  float: right;
-  position: relative;
-  left: -54%;
-  padding: 0 35px;
+.swcontainer input[type=submit] {
+  margin-right: 1%;
+  width: 150px;
 }
 
-.showAllBtn{
-  float: right;
-  position: relative;
-  left: 10%;
-  padding: 0 35px;
+.showAllBtn {
+  display: inline-block;
+  width: 150px;
 }
 
-.slide1{
-  height: 600px;
+.slide1 {
+  height: 680px;
 }
 
-.slide2{
-  height: 600px;
+.slide1content {
+  padding-top: 200px;
+}
+
+.slide2 {
+  height: 680px;
+}
+
+.slide2content1 {
+  padding-top: 10%;
+}
+
+.slide2content2 {
+  padding-top: 200px;
+}
+
+.slide3 {
+  height: 680px;
+}
+
+.slide3content {
+  padding-top: 200px;
+}
+
+.swmaterial-icons {
+  font-size: 32px;
+  padding-top: 28%;
 }

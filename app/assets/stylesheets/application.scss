@@ -52,6 +52,8 @@ nav a {
   width: 150px;
 }
 
+// Modal ----------------------------------------------------------------------
+
 .modal-header {
   align-items: center;
   justify-content: center;
@@ -77,13 +79,16 @@ nav a {
   position: relative;
   left: -43%;
 }
-<<<<<<< HEAD
 
-body {
-  background-image: url("wallbg.jpeg");
+// ----------------------------------------------------------------------------
+
+//navbar-----------------------------------------------------------------------
+.navcontainer{
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-/* navbar */
 .navbar {
   background-color: #123c69;
   border-color: #123c69;
@@ -101,4 +106,14 @@ body {
   .navbar-brand {
     margin-left: 1%;
   }
+}
+
+// ----------------------------------------------------------------------------
+
+.page-footer {
+  background-color: #BAB2B5;
+}
+
+.footericons {
+  margin-top: 10px;
 }
