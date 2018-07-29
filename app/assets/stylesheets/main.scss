@@ -1,6 +1,14 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  width: 1440px;
+}
+
+.py-3 {
+  padding-top: 0 !important;
+}
+
 .swcontainer {
   display: flex;
   flex-direction: row;
@@ -8,6 +16,7 @@
   align-items: center;
   text-align: center;
   height: 100%;
+  width: 100%;
 }
 
 .indexform {
@@ -28,6 +37,9 @@
 .swcontainer input[type=submit] {
   margin-right: 1%;
   width: 150px;
+  color: #123C69;
+  background-color: white;
+  font-weight: 500;
 }
 
 .showAllBtn {
@@ -36,11 +48,21 @@
 }
 
 .slide1 {
-  height: 680px;
+  height: 750px;
+}
+
+.bgimage {
+  height: 750px;
+  background-image: url("restaurant2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1440px;
 }
 
 .slide1content {
-  padding-top: 200px;
+  padding-top: 250px;
 }
 
 .slide2 {
@@ -64,6 +86,6 @@
 }
 
 .swmaterial-icons {
-  font-size: 32px;
-  padding-top: 28%;
+  font-size: 42px;
+  padding-top: 16%;
 }
