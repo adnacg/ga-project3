@@ -8,11 +8,11 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a patron?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a Patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_session_path, method: :get, class:"patronbtn" %>
-          <%= button_to "Restaurant", new_user_session_path, method: :get, class:"userbtn" %>
+          <%= button_to "Patron", new_patron_session_path, method: :get, class:"btn btn-sm patronbtn ekthemebtn" %>
+          <%= button_to "Restaurant", new_user_session_path, method: :get, class:"btn btn-sm userbtn ekthemebtn" %>
           <br />
           <br />
           <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
@@ -29,8 +29,8 @@
           <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
-          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
+          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"btn btn-sm patronbtn ekthemebtn" %>
+          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"btn btn-sm userbtn ekthemebtn" %>
           <br />
           <br />
           <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
