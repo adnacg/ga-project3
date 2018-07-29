@@ -43,7 +43,12 @@ i:hover {
 }
 
 nav a {
-  color: #123c69;
+  color: #eee2dc;
+}
+
+nav a:hover {
+  color: #eee2dc;
+  text-shadow: 2px 2px 8px #edc7b7;
 }
 
 .form-inline .form-control {
@@ -76,4 +81,32 @@ nav a {
   float: right;
   position: relative;
   left: -43%;
+}
+
+body {
+  background-image: url("wallbg.jpeg");
+}
+
+/* navbar */
+.navbar {
+  background-color: #123c69;
+  border-color: #123c69;
+}
+
+.navbar-brand {
+  margin-left: 10%;
+}
+
+.collapse {
+  margin-right: 10%;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #eee2dc;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 1%;
+  }
 }

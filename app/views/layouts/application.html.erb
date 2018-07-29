@@ -8,11 +8,11 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a patron?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sign in as a Restaurant or a Patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_session_path, method: :get, class:"patronbtn" %>
-          <%= button_to "Restaurant", new_user_session_path, method: :get, class:"userbtn" %>
+          <%= button_to "Patron", new_patron_session_path, method: :get, class:"btn btn-sm patronbtn ekthemebtn" %>
+          <%= button_to "Restaurant", new_user_session_path, method: :get, class:"btn btn-sm userbtn ekthemebtn" %>
           <br />
           <br />
           <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
@@ -29,8 +29,8 @@
           <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
         </div>
         <div class="modal-body">
-          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
-          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
+          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"btn btn-sm patronbtn ekthemebtn" %>
+          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"btn btn-sm userbtn ekthemebtn" %>
           <br />
           <br />
           <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
@@ -51,19 +51,17 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
+       <div class="navcontainer">
           <nav class="navbar navbar-expand-lg navbar-light col-12">
-           
+
+            <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
+            <%= link_to image_tag("logo.svg", size: "100x50"), root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-
-                <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
-                <%= image_tag("logo.svg", size: "100x50")%>
-                <%= link_to 'CrowdedNot', root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
 
                 <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
                 <%if !current_page?(root_path) %>
@@ -85,6 +83,7 @@
 
                 <% elsif user_signed_in? %>
                   <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link" %>
+                  <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link" %>
                   <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link" %>
 
                 <% elsif patron_signed_in? %>
@@ -95,7 +94,6 @@
               </div>
           </nav>
       </div>
-    </div>
 
     <div class="container">
       <div class="row">

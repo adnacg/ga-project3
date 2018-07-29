@@ -46,8 +46,10 @@
 .adjustbtn {
   background-color: #ac3b61;
   border: 1px solid #eee2dc;
-  height: 38px;
-  width: 38px;
+  height: 50px;
+  width: 50px;
+  color: #eee2dc;
+  font-size: 1.5rem;
 }
 
 .adjustbtn:hover,
@@ -55,4 +57,10 @@
 .adjustbtn:focus {
   background-color: #ac3b61;
   opacity: 0.9;
+}
+
+.separator {
+  border: 0.8px solid #bab2b5;
+  width: 80%;
+  margin: 20px auto;
 }
