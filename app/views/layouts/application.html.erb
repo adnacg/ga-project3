@@ -81,13 +81,8 @@
 
                 <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
                  <% if !user_signed_in? && !patron_signed_in? %>
-<<<<<<< HEAD
                   <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link navBtnEffect" %>
-                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn btn-outline-success my-2 my-sm-0 navBtnEffect" %>
-=======
-                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link" %>
-                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn themesignupbtn" %>
->>>>>>> master
+                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn themesignupbtn navBtnEffect" %>
 
                 <% elsif user_signed_in? %>
                   <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link navBtnEffect" %>
