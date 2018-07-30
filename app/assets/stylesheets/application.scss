@@ -127,6 +127,8 @@ nav a:hover {
   margin-top: 20px;
 }
 
+// ----------------------------------------------------------------------------
+
 #eksearch {
   opacity: 1;
   background-color: #eee2dc;
@@ -134,12 +136,24 @@ nav a:hover {
   margin-left: 15px;
 }
 
-// ----------------------------------------------------------------------------
-
 .alert {
   position: absolute;
   left: 1px;
   right: 1px;
   z-index: 99;
   text-align: center;
+}
+
+.themejoinus {
+  font-weight: bold;
+  border: 1px solid #123c69;
+  max-width: 600px;
+  background-color: #123c69;
+  font-size: 2rem;
+  color: #eee2dc;
+}
+
+.themejoinus:hover {
+  background-color: #eee2dc;
+  color: #123c69;
 }

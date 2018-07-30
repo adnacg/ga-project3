@@ -1,10 +1,6 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
-  width: 1440px;
-}
-
 .py-3 {
   padding-top: 0 !important;
 }
@@ -27,17 +23,17 @@ html {
   margin-left: -22%;
 }
 
-.swcontainer input[type=text] {
+.swcontainer input[type="text"] {
   margin: 20px;
   width: 600px;
   height: 50px;
-  font-size: 32px; 
+  font-size: 32px;
 }
 
-.swcontainer input[type=submit] {
+.swcontainer input[type="submit"] {
   margin-right: 1%;
   width: 150px;
-  color: #123C69;
+  color: #123c69;
   background-color: white;
   font-weight: 500;
 }
@@ -58,22 +54,21 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1440px;
+  width: 100%;
 }
 
 .slide1content {
   padding-top: 250px;
-
 }
 
 .slide2 {
   height: 680px;
 }
 
-.slide2 p{
-    width: 60%; 
-    margin-left: 20%; 
-    margin-right: 20%; 
+.slide2 p {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .slide2content1 {
@@ -81,15 +76,21 @@ html {
 }
 
 .slide2content2 {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 .slide3 {
-  height: 680px;
+  height: 500px;
+  display: flex;
 }
 
 .slide3content {
-  padding-top: 200px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.slide3h1 {
+  max-width: 500px;
 }
 
 .swmaterial-icons {
