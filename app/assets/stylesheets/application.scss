@@ -57,6 +57,8 @@ nav a:hover {
   width: 150px;
 }
 
+// Modal ----------------------------------------------------------------------
+
 .modal-header {
   align-items: center;
   justify-content: center;
@@ -83,11 +85,15 @@ nav a:hover {
   left: -43%;
 }
 
-body {
-  background-image: url("wallbg.jpeg");
+// ----------------------------------------------------------------------------
+
+//navbar-----------------------------------------------------------------------
+.navcontainer {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-/* navbar */
 .navbar {
   background-color: #123c69;
   border-color: #123c69;
@@ -111,9 +117,19 @@ body {
   }
 }
 
-#eksearch {
-  opacity: 1;
-  background-color: #eee2dc;
-  margin-right: 20px;
-  margin-left: 15px;
+// ----------------------------------------------------------------------------
+
+.page-footer {
+  background-color: #bab2b5;
 }
+
+.footericons {
+  margin-top: 20px;
+}
+
+// #eksearch {
+//   opacity: 1;
+//   background-color: #eee2dc;
+//   margin-right: 20px;
+//   margin-left: 15px;
+// }
