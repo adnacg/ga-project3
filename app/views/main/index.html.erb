@@ -26,25 +26,25 @@
   <div class="bgimage">
   <div class="slide1content">
     <%= image_tag("splash.png", size: "300x80") %>
-    <h1>LOOKING FOR SEATS?</h1>
+    <h1><strong>LOOKING FOR SEATS?</strong></h1>
 
     <%= form_with url: users_path, method: :get, class: "indexform", local: true do |form| %>
       <%= form.text_field :search, class: "swform-control btn disabled", placeholder: "Enter a Restaurant Name" %>
       <br/>
       <%= form.submit "Search", class: "btn btn-default" =%>
-    <% end %> 
+    <% end %>
     <div class="showAllBtn">
     <%= button_to "Show All", users_path, method: :get, class: "btn btn-default" %>
     </div>
   </div>
   </div>
   </div>
-  
+
 
   <div class="slide2">
   <div class="slide2content1">
       <p><%= image_tag('ascustomer.png') %></p>
-      <h1>AS A PATRON</h1>
+      <h1><strong>AS A PATRON</strong></h1>
       <br/>
       <p>Have you ever travelled to a restaurant but ended up waiting for a long time to get a table?
       Have you ever been to your favourite restaurants at peak hour but couldn't get a table for the group?</p>
@@ -53,7 +53,7 @@
   </div>
   <div class="slide2content2">
       <p><%= image_tag('asrestaurant.png') %></p>
-      <h1>AS A RESTAURANT</h1>
+      <h1><strong>AS A RESTAURANT</strong></h1>
       <br/>
       <p>
       We love our customers and we definitely want to provide the best service to them!
@@ -67,7 +67,7 @@
 
   <div class="slide3">
   <div class="slide3content">
-      <h1 class="slide3h1">What Are You Waiting For?</h1>
+      <h1 class="slide3h1"><strong>What Are You Waiting For?</strong></h1>
       <br />
       <br />
       <div><%= link_to 'JOIN US NOW!', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-lg themejoinus" %></div>
