@@ -1,9 +1,9 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
-  width: 1440px;
-}
+// html {
+//   width: 1440px;
+// }
 
 .py-3 {
   padding-top: 0 !important;
@@ -27,24 +27,34 @@ html {
   margin-left: -22%;
 }
 
-.swcontainer input[type=text] {
+.slide1content h1 {
+  color: black;
+  margin-top: -4%;
+}
+
+.swcontainer input[type="text"] {
   margin: 20px;
   width: 600px;
   height: 50px;
-  font-size: 32px; 
+  font-size: 32px;
+  border-color: black;
+  border-width: 3px;
+  opacity: 1.65;
 }
 
-.swcontainer input[type=submit] {
-  margin-right: 1%;
+.swcontainer input[type="submit"] {
+  margin-right: 4%;
   width: 150px;
-  color: #123C69;
-  background-color: white;
-  font-weight: 500;
+  color: black;
+  background: url("splash.png") 0 -135px transparent;
+  font-weight: 700;
 }
 
 .showAllBtn {
   display: inline-block;
   width: 150px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .slide1 {
@@ -58,22 +68,21 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1440px;
+  width: 100%;
 }
 
 .slide1content {
   padding-top: 250px;
-
 }
 
 .slide2 {
-  height: 680px;
+  height: 650px;
 }
 
-.slide2 p{
-    width: 60%; 
-    margin-left: 20%; 
-    margin-right: 20%; 
+.slide2 p {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .slide2content1 {
@@ -81,15 +90,22 @@ html {
 }
 
 .slide2content2 {
-  padding-top: 200px;
+  padding-top: 50px;
 }
 
 .slide3 {
-  height: 680px;
+  height: 800px;
+  padding-top: 30px;
+  display: flex;
 }
 
 .slide3content {
-  padding-top: 200px;
+  padding-top: 500px;
+  margin: 0 auto;
+}
+
+.slide3h1 {
+  max-width: 500px;
 }
 
 .swmaterial-icons {

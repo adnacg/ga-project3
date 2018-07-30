@@ -25,6 +25,7 @@ body {
   background-color: #eee2dc;
   color: #123c69;
   background-image: url("wallbg.jpeg");
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a {
@@ -55,6 +56,12 @@ nav a:hover {
   background-color: #eee2dc;
   border: 1px solid #123c69;
   width: 150px;
+}
+
+.removepadding {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 // Modal ----------------------------------------------------------------------
@@ -88,10 +95,10 @@ nav a:hover {
 // ----------------------------------------------------------------------------
 
 //navbar-----------------------------------------------------------------------
-.navcontainer{
+.navcontainer {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 .navbar {
@@ -130,9 +137,50 @@ nav a:hover {
 // ----------------------------------------------------------------------------
 
 .page-footer {
-  background-color: #BAB2B5;
+  background-color: #bab2b5;
 }
 
 .footericons {
   margin-top: 20px;
+}
+
+// ----------------------------------------------------------------------------
+
+#eksearch {
+  opacity: 1;
+  background-color: #eee2dc;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.alert {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  z-index: 99;
+  text-align: center;
+}
+
+.themejoinus {
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  border: 2px solid #123c69;
+  max-width: 600px;
+  background-color: #123c69;
+  font-size: 2rem;
+  color: #eee2dc;
+}
+
+.themejoinus:hover {
+  background-color: #eee2dc;
+  color: #123c69;
+}
+
+.themesignupbtn,
+.themesignupbtn:hover,
+.themesignupbtn:active,
+.themesignupbtn:active:focus {
+  background-color: #eee2dc;
+  border: 1px solid #eee2dc;
+  color: #123c69;
 }
