@@ -1,5 +1,5 @@
   <%#------------------------------- Sign up Modal -----------------------------------------------------------------------%>
-  
+
   <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -26,7 +26,8 @@
   <div class="bgimage">
   <div class="slide1content">
     <%= image_tag("splash.png", size: "300x80") %>
-    <h1>Looking for seats?</h1>  
+    <h1>LOOKING FOR SEATS?</h1>
+
     <%= form_with url: users_path, method: :get, class: "indexform", local: true do |form| %>
       <%= form.text_field :search, class: "swform-control btn disabled", placeholder: "Enter a Restaurant Name" %>
       <br/>
@@ -41,23 +42,35 @@
   
 
   <div class="slide2">
-  <div class="slide2content1">  
-      <h1>As a patron</h1>
-      <p>Ex mollit commodo ut cupidatat tempor duis Lorem aliquip Lorem occaecat excepteur reprehenderit eu ut. Ad cupidatat dolore magna enim irure pariatur sit quis elit est tempor aliquip. Ea ea deserunt sint cupidatat commodo ut occaecat ad et mollit ut cupidatat ea reprehenderit. Non incididunt occaecat id ipsum anim non deserunt ea incididunt officia consectetur in voluptate veniam.</p>
+  <div class="slide2content1">
+      <p><%= image_tag('ascustomer.png') %></p>
+      <h1>AS A PATRON</h1>
+      <br/>
+      <p>Have you ever travelled to a restaurant but ended up waiting for a long time to get a table?
+      Have you ever been to your favourite restaurants at peak hour but couldn't get a table for the group?</p>
+      <p>With <strong>CrowdedNot</strong>, you can now easily check for available tables at our extensive list of restaurants in advance!</p>
+      <p>No more surprises.</p>
   </div>
   <div class="slide2content2">
-      <h1>As a User</h1>
-      <p>Officia eiusmod sint eiusmod ex sint excepteur ad. Aliquip aute id enim pariatur fugiat labore amet tempor officia irure quis. Amet Lorem nisi nulla excepteur excepteur. Dolor duis excepteur labore ex cupidatat anim Lorem irure minim enim ullamco sunt occaecat Lorem. Sit aliquip nulla magna minim non et minim velit nisi officia sunt. Sit sit dolor nisi eiusmod enim. Elit nisi magna exercitation sint.</p>
-  </div>  
+      <p><%= image_tag('asrestaurant.png') %></p>
+      <h1>AS A RESTAURANT</h1>
+      <br/>
+      <p>
+      We love our customers and we definitely want to provide the best service to them!
+      The best way to never disappoint the patrons is to be able to greet, seat, and serve them food in the shortest time possible!
+      </p>
+      <p>
+      Come join us now and start providing your real-time table turnovers to your customers!
+      </p>
+  </div>
   </div>
 
   <div class="slide3">
   <div class="slide3content">
-      <h2>What are you waiting for?</h2>
-      <h3>Join us now!</h3>
+      <h1 class="slide3h1">What Are You Waiting For?</h1>
       <br />
       <br />
-      <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-outline-success my-2 my-sm-0" %>
+      <div><%= link_to 'JOIN US NOW!', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-lg themejoinus" %></div>
   </div>
   </div>
 
