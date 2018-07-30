@@ -57,6 +57,12 @@ nav a:hover {
   width: 150px;
 }
 
+.removepadding {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
 // Modal ----------------------------------------------------------------------
 
 .modal-header {
