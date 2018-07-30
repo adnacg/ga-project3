@@ -41,14 +41,17 @@
 
   <div class="slide2">
   <div class="slide2content1">
+      <p><%= image_tag('ascustomer.png') %></p>
       <h1>AS A PATRON</h1>
       <br/>
       <p>Have you ever travelled to a restaurant but ended up waiting for a long time to get a table?
       Have you ever been to your favourite restaurants at peak hour but couldn't get a table for the group?</p>
       <p>With <strong>CrowdedNot</strong>, you can now easily check for available tables at our extensive list of restaurants in advance!</p>
+      <p>No more surprises.</p>
   </div>
   <div class="slide2content2">
-      <h1>AS A USER</h1>
+      <p><%= image_tag('asrestaurant.png') %></p>
+      <h1>AS A RESTAURANT</h1>
       <br/>
       <p>
       We love our customers and we definitely want to provide the best service to them!
@@ -65,7 +68,7 @@
       <h1 class="slide3h1">What Are You Waiting For?</h1>
       <br />
       <br />
-      <%= link_to 'JOIN US NOW!', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-lg themejoinus" %>
+      <div><%= link_to 'JOIN US NOW!', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-lg themejoinus" %></div>
   </div>
   </div>
 

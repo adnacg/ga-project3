@@ -147,7 +147,7 @@ nav a:hover {
 .themejoinus {
   letter-spacing: 0.3rem;
   font-weight: bold;
-  border: 1px solid #123c69;
+  border: 2px solid #123c69;
   max-width: 600px;
   background-color: #123c69;
   font-size: 2rem;
@@ -156,5 +156,14 @@ nav a:hover {
 
 .themejoinus:hover {
   background-color: #eee2dc;
+  color: #123c69;
+}
+
+.themesignupbtn,
+.themesignupbtn:hover,
+.themesignupbtn:active,
+.themesignupbtn:active:focus {
+  background-color: #eee2dc;
+  border: 1px solid #eee2dc;
   color: #123c69;
 }
