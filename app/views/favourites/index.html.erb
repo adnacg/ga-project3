@@ -11,7 +11,7 @@
     <div class="card ekusercard" style="width: 18rem;">
     <%= image_tag("cardboard_bg.jpg", class:"card-img-top ekcardimg") %>
       <div class="card-body">
-        <h5 class="card-title"><%= user.name %></h5>
+        <h5 class="card-title"><strong><%= user.name %></strong></h5>
         <div class="detaildiv">
           <%= image_tag("splashsm.png", size: "100x35") %>
           <%= link_to 'Details', user_path(user), class: "btn btn-sm ekdetailbtn" %>
