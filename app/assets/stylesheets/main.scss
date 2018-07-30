@@ -43,18 +43,32 @@
 }
 
 .swcontainer input[type="submit"] {
-  margin-right: 4%;
   width: 150px;
   color: black;
-  background: url("splash.png") 0 -135px transparent;
-  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: -31%;
+}
+
+.swcontainer input[type="submit"]:hover {
+  font-size: 1.7rem;
+}
+
+.btnbckimg {
+  display: inline-block;
+  background: url("splash.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 0%;
 }
 
 .showAllBtn {
   display: inline-block;
-  width: 150px;
   color: black;
-  background-color: rgba(255, 255, 255, 0);
+  background: url("splash.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .slide1 {
