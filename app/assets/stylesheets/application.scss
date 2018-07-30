@@ -127,9 +127,21 @@ nav a:hover {
   margin-top: 20px;
 }
 
-// #eksearch {
-//   opacity: 1;
-//   background-color: #eee2dc;
-//   margin-right: 20px;
-//   margin-left: 15px;
-// }
+#eksearch {
+  opacity: 1;
+  background-color: #eee2dc;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+// ----------------------------------------------------------------------------
+
+.alert {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  z-index: 99;
+  // background: transparent;
+  // border: none;
+  // text-align: center;
+}
