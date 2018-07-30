@@ -74,22 +74,22 @@
                 <% end %>
 
                 <%# Explore -------------------------------------------------------------------------------------------------------------------------------%>
-                <%= link_to 'Explore', users_url, method: :get, class: "nav-item active nav-link" %>
+                <%= link_to 'Explore', users_url, method: :get, class: "nav-item active nav-link navBtnEffect" %>
 
                 <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
                  <% if !user_signed_in? && !patron_signed_in? %>
-                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link" %>
-                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn btn-outline-success my-2 my-sm-0" %>
+                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link navBtnEffect" %>
+                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn btn-outline-success my-2 my-sm-0 navBtnEffect" %>
 
                 <% elsif user_signed_in? %>
-                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link" %>
-                  <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link" %>
-                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link" %>
+                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link navBtnEffect" %>
+                  <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link navBtnEffect" %>
+                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link navBtnEffect" %>
 
                 <% elsif patron_signed_in? %>
-                  <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link" %>
-                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link" %>
-                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link" %>
+                  <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link navBtnEffect"%>
+                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link navBtnEffect" %>
+                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link navBtnEffect" %>
                 <% end %>
               </div>
           </nav>

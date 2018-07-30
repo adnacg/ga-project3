@@ -111,6 +111,16 @@ nav a:hover {
   border-color: #eee2dc;
 }
 
+.navBtnEffect {
+  //transform: translate(-50%, -50%);
+  border: none;
+  transition: all 0.15s;
+}
+
+.navBtnEffect:hover {
+  transform: translate(0%, -30%);
+}
+
 @media (max-width: 768px) {
   .navbar-brand {
     margin-left: 1%;
