@@ -1,40 +1,98 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  width: 1440px;
+}
+
+.py-3 {
+  padding-top: 0 !important;
+}
+
 .swcontainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 1200px;
+  height: 100%;
+  width: 100%;
 }
 
-.swcontainer input[type=text]{
+.indexform {
+  display: initial;
+}
+
+.swform-control {
+  margin-left: -22%;
+}
+
+.swcontainer input[type=text] {
   margin: 20px;
   width: 600px;
   height: 50px;
   font-size: 32px; 
 }
 
-.swcontainer input[type=submit]{
-  float: right;
-  position: relative;
-  left: -54%;
-  padding: 0 35px;
+.swcontainer input[type=submit] {
+  margin-right: 1%;
+  width: 150px;
+  color: #123C69;
+  background-color: white;
+  font-weight: 500;
 }
 
-.showAllBtn{
-  float: right;
-  position: relative;
-  left: 10%;
-  padding: 0 35px;
+.showAllBtn {
+  display: inline-block;
+  width: 150px;
 }
 
-.slide1{
-  height: 600px;
+.slide1 {
+  height: 750px;
 }
 
-.slide2{
-  height: 600px;
+.bgimage {
+  height: 750px;
+  background-image: url("restaurant2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1440px;
+}
+
+.slide1content {
+  padding-top: 250px;
+
+}
+
+.slide2 {
+  height: 680px;
+}
+
+.slide2 p{
+    width: 60%; 
+    margin-left: 20%; 
+    margin-right: 20%; 
+}
+
+.slide2content1 {
+  padding-top: 10%;
+}
+
+.slide2content2 {
+  padding-top: 200px;
+}
+
+.slide3 {
+  height: 680px;
+}
+
+.slide3content {
+  padding-top: 200px;
+}
+
+.swmaterial-icons {
+  font-size: 42px;
+  padding-top: 16%;
 }

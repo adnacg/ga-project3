@@ -1,9 +1,33 @@
+  <%#------------------------------- Sign up Modal -----------------------------------------------------------------------%>
+  
+  <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
+        </div>
+        <div class="modal-body">
+          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
+          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
+          <br />
+          <br />
+          <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%#-------------------------------- End of modal -----------------------------------------------------------------------%>
 <div class="container swcontainer">
+<div class="row">
+<div class="col sm">
+
   <div class="slide1">
-    <h1>Looking for seats?</h1>
-    
-    <%= form_with url: users_path, method: :get, local: true do |form| %>
-      <%= form.text_field :search, class: "form-control", placeholder: "Enter a Restaurant Name" %>
+  <div class="bgimage">
+  <div class="slide1content">
+    <h1>Looking for seats?</h1>  
+    <%= form_with url: users_path, method: :get, class: "indexform", local: true do |form| %>
+      <%= form.text_field :search, class: "swform-control", placeholder: "Enter a Restaurant Name" %>
       <br/>
       <%= form.submit "Search", class: "btn btn-default" =%>
     <% end %>
@@ -11,4 +35,31 @@
     <%= button_to "Show All", users_path, method: :get, class: "btn btn-default" %>
     </div>
   </div>
+    <i class="material-icons swmaterial-icons">keyboard_arrow_down</i>
+  </div>
+  </div>
+
+  <div class="slide2">
+  <div class="slide2content1">  
+      <h1>As a patron</h1>
+      <p>Ex mollit commodo ut cupidatat tempor duis Lorem aliquip Lorem occaecat excepteur reprehenderit eu ut. Ad cupidatat dolore magna enim irure pariatur sit quis elit est tempor aliquip. Ea ea deserunt sint cupidatat commodo ut occaecat ad et mollit ut cupidatat ea reprehenderit. Non incididunt occaecat id ipsum anim non deserunt ea incididunt officia consectetur in voluptate veniam.</p>
+  </div>
+  <div class="slide2content2">
+      <h1>As a User</h1>
+      <p>Officia eiusmod sint eiusmod ex sint excepteur ad. Aliquip aute id enim pariatur fugiat labore amet tempor officia irure quis. Amet Lorem nisi nulla excepteur excepteur. Dolor duis excepteur labore ex cupidatat anim Lorem irure minim enim ullamco sunt occaecat Lorem. Sit aliquip nulla magna minim non et minim velit nisi officia sunt. Sit sit dolor nisi eiusmod enim. Elit nisi magna exercitation sint.</p>
+  </div>  
+  </div>
+
+  <div class="slide3">
+  <div class="slide3content">
+      <h2>What are you waiting for?</h2>
+      <h3>Join us now!</h3>
+      <br />
+      <br />
+      <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-outline-success my-2 my-sm-0" %>
+  </div>
+  </div>
+
+</div>
+</div>
 </div>
