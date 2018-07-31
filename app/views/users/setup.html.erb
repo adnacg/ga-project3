@@ -7,11 +7,11 @@
 </div>
 
 <div class="setupdiv">
-<%= form_with scope: :user, url: user_update_path(current_user), local: true do |form| %>
+  <%= form_with scope: :user, url: user_update_path(current_user), local: true do |form| %>
 
   <p><strong>
     <%= form.label :name, 'Name of your restaurant: ' %></strong><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"btn btn-sm themeprofileinput disabled" %>
   </p>
 
   <br/><p><strong>Tables in your restaurant:</strong></p>
@@ -23,7 +23,7 @@
     <h5 class="ekseatertype">2-Seaters</h5><br/>
 
     <p>
-      <%= form.number_field :two_seater, :min => 0, :max => 100, value: 0 %>
+      <%= form.number_field :two_seater, :min => 0, :max => 100, value: 0, class:"btn btn-sm themeprofileinput-short disabled" %>
     </p>
 
   </div>
@@ -35,7 +35,7 @@
     <h5 class="ekseatertype">4-Seaters</h5><br/>
 
     <p>
-      <%= form.number_field :four_seater, :min => 0, :max => 100, value: 0 %>
+      <%= form.number_field :four_seater, :min => 0, :max => 100, value: 0, class:"btn btn-sm themeprofileinput-short disabled" %>
     </p>
 
   </div>
@@ -47,18 +47,18 @@
     <h5 class="ekseatertype">6-Seaters</h5><br/>
 
     <p>
-      <%= form.number_field :six_seater, :min => 0, :max => 100, value: 0 %>
+      <%= form.number_field :six_seater, :min => 0, :max => 100, value: 0, class:"btn btn-sm themeprofileinput-short disabled" %>
     </p>
 
   </div>
 
   <p>
-    <%= form.submit 'Save My Info!', class:"btn btn-sm eksubmitbtn" %>
+    <%= form.submit 'Save My Info!', class:"btn btn-sm ekthemebtn" %>
   </p>
 
-<% end %>
-<%# </div> %>
+  <div class="form-submit-separator"></div>
 
+<% end %>
 
 </div>
 </div>

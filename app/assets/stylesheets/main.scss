@@ -1,16 +1,5 @@
-// -----------------------------------------------------
+// Parallax -----------------------------------------------------
 
-// .swcontainer {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-//   height: 100%;
-//   width: 100%;
-// }
-
-// parallax -----------------------------------------------------
 .parallax-slide {
   height: 700px;
   display: flex;
@@ -20,7 +9,7 @@
 
 .parallax-img {
   height: 750px;
-  background-image: url("restaurant2.jpg");
+  background-image: url("restaurant.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,4 +90,50 @@
 .themejoinus:hover {
   background-color: $themelbeige;
   color: $themeblue;
+}
+
+// Misc Inputs / Buttons -----------------------------------------------------
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexcolumn {
+  flex-direction: column;
+}
+
+.flexrow {
+  flex-direction: row;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.themeprofileinput {
+  width: 300px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.themeprofileinput-short {
+  width: 50px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-submit-separator {
+  height: 1.5rem;
+}
+
+.ekthemebtn {
+  background-color: $themeblue;
+  color: $themelbeige;
+  border: 1px solid $themeblue;
+}
+
+.ekthemebtn:hover {
+  opacity: 0.9;
 }

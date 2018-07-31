@@ -117,6 +117,8 @@ nav a:hover {
   background-color: $themelbeige;
   margin-right: 20px;
   margin-left: 15px;
+  width: 150px;
+  text-align: left;
 }
 
 // Alert Modal ----------------------------------------------------------------------
@@ -133,10 +135,4 @@ nav a:hover {
   background-color: $themegrey;
   text-align: center;
   width: 100%;
-  a {
-    color: $themeblue;
-  }
-  i {
-    color: $themeblue;
-  }
 }

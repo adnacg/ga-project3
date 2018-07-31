@@ -1,21 +1,31 @@
-<div class="container swcontainer2">
-  <div>
-    <h2>Forgot your password?</h2>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+  <div class="flexcenter flexcolumn">
+
+    <div class="ektitle ektitlediv">
+      <p>Forgot your password?</p>
+    </div>
+
+    <div class="textcenter"><%= devise_error_messages! %><br/></div>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
 
-      <div class="field swfield">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter your registered email", class:"btn btn-sm themeprofileinput disabled" %>
       </div>
-  
-      <div class="resetPassword">
-        <%= f.submit "Reset Password" %>
+
+      <div class="flexcenter themeprofileinput">
+        <%= f.submit "Reset Password", class: "btn btn-sm ekthemebtn" %>
       </div>
+
     <% end %>
-    <br />
-    <br />
+
     <%= render "devise/shared/links" %>
-    </div>
+
+  </div>
+
+  </div>
+  </div>
   </div>

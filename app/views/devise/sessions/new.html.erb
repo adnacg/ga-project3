@@ -1,31 +1,38 @@
-<div class="container swcontainer2">
-  <div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+  <div class="flexcenter flexcolumn">
     <div class="ektitle ektitlediv">
-    <h2>Log in</h2>
+      <p>Log In</p>
     </div>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field swfield">
+      <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "Email", class:"btn btn-sm themeprofileinput disabled" %>
       </div>
 
-      <div class="field swfield">
+      <div class="field">
         <%= f.password_field :password, autocomplete: "off" , placeholder: "Password", class:"btn btn-sm themeprofileinput disabled" %>
       </div>
 
       <% if devise_mapping.rememberable? -%>
-        <div class="checkbox">
+        <div class="checkbox themeprofileinput">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>
       <% end -%>
 
-      <div class="actions swactions">
+      <div class="actions flexcenter">
         <%= f.submit "Log in", class: "btn btn-sm ekthemebtn" %>
       </div>
     <% end %>
-    <br />
-    <br />
+
+    <div class="form-submit-separator"></div>
+
     <%= render "devise/shared/links" %>
   </div>
+
+</div>
+</div>
 </div>

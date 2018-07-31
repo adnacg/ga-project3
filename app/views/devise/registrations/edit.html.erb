@@ -7,7 +7,7 @@
 <%= link_to 'Return', :back, class:"returnicon returnword" %>
 
 <div class="ektitle ektitlediv">
-  Update Your Profile
+  <p>Update Your Profile</p>
 </div>
 
 <div class="profilephotodiv leftprofilediv">
@@ -25,8 +25,9 @@
 <div class="ekedituserdiv">
 <div class="ekedituserinnerdiv">
 
+  <div class="textcenter"><%= devise_error_messages! %><br/></div>
+
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
 
     <div class="field">
       <strong><%= f.label :name %></strong><br />

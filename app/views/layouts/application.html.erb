@@ -10,6 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -72,7 +73,7 @@
                   <%if !current_page?(root_path) %>
                     <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
                     <div class="form-group">
-                      <%= form.text_field :search, class: "form-control", placeholder: "search...", class:"btn btn-sm themeprofileinput disabled", id:"nav-search" %>
+                      <%= form.text_field :search, class: "form-control", placeholder: "search...", class:"btn btn-sm disabled", id:"nav-search" %>
                     </div>
                       <%# <%= form.submit 'Search', class: "btn btn-default" %>
                     <% end %>
@@ -121,20 +122,20 @@
       </div>
     </div>
 
-      <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 py-4">
-              <div class="mb-4">
-                <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3">FB</i></a>
-                <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3">TWT</i></a>
-                <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3">LNK</i></a>
-                <a href="#"><i class="fa fa-instagram fa-lg">IG</i></a>
-              </div>
-              <p>© 2018 Copyright @ &nbsp;<a href="#">CrowdedNot</a></p>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 py-4">
+            <div class="mb-4">
+              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3"></i></a>
+              <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
             </div>
+            <p>© 2018 Copyright @ &nbsp;<a href="#">CrowdedNot</a></p>
           </div>
         </div>
+      </div>
     </footer>
 
   </body>
