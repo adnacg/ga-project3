@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
@@ -54,56 +54,57 @@
 
   <%#-------------------------------- End of modal -----------------------------------------------------------------------%>
 
-       <div class="navcontainer">
-          <nav class="navbar navbar-expand-lg navbar-light col-12">
+      <div class="navcontainer">
+       <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light col-12">
 
-            <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
-            <%# <%= link_to image_tag("logo.svg", size: "100x50"), root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
-            <%= link_to 'CROWDEDNOT', root_url, method: :get, class: "navbar-brand d-flex mr-auto", style:"color: #eee2dc;" %>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+              <%# Logo ---------------------------------------------------------------------------------------------------------------------------------%>
+              <%# <%= link_to image_tag("logo.svg", size: "100x50"), root_url, method: :get, class: "navbar-brand d-flex mr-auto" %>
+              <%= link_to 'CROWDEDNOT', root_url, method: :get, class: "navbar-brand d-flex mr-auto", style:"color: #eee2dc;" %>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
-                <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
-                <%if !current_page?(root_path) %>
-                  <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
-                  <div class="form-group">
-                    <%= form.text_field :search, class: "form-control", placeholder: "search...", class:"btn btn-sm themeprofileinput disabled", id:"eksearch" %>
-                  </div>
-                    <%# <%= form.submit 'Search', class: "btn btn-default" %>
+                  <%# Search -------------------------------------------------------------------------------------------------------------------------------%>
+                  <%if !current_page?(root_path) %>
+                    <%= form_with url: users_path, method: :get, class: "navbar-form navbar-right form-inline", local: true do |form| %>
+                    <div class="form-group">
+                      <%= form.text_field :search, class: "form-control", placeholder: "search...", class:"btn btn-sm themeprofileinput disabled", id:"nav-search" %>
+                    </div>
+                      <%# <%= form.submit 'Search', class: "btn btn-default" %>
+                    <% end %>
                   <% end %>
-                <% end %>
 
-                <%# Explore -------------------------------------------------------------------------------------------------------------------------------%>
-                <%= link_to 'Explore', users_url, method: :get, class: "nav-item active nav-link navBtnEffect" %>
+                  <%# Explore -------------------------------------------------------------------------------------------------------------------------------%>
+                  <%= link_to 'Explore', users_url, method: :get, class: "nav-item active nav-link" %>
 
-                <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
-                 <% if !user_signed_in? && !patron_signed_in? %>
-                  <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link navBtnEffect" %>
-                  <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn themesignupbtn navBtnEffect" %>
+                  <%# Others --------------------------------------------------------------------------------------------------------------------------------%>
+                  <% if !user_signed_in? && !patron_signed_in? %>
+                    <%= link_to 'Sign In', signin_modal_path, remote: true, data: { target: "#modal-window-1", toggle: "modal" }, class: "nav-item active nav-link" %>
+                    <%= link_to 'Sign Up', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "nav-item nav-link btn themesignupbtn" %>
 
-                <% elsif user_signed_in? %>
-                  <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link navBtnEffect" %>
-                  <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link navBtnEffect" %>
-                  <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link navBtnEffect" %>
+                  <% elsif user_signed_in? %>
+                    <%= link_to 'Dashboard', user_tables_path(current_user), class: "nav-item active nav-link" %>
+                    <%= link_to 'Setting', edit_user_registration_path, class: "nav-item active nav-link" %>
+                    <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: "nav-item active nav-link" %>
 
-                <% elsif patron_signed_in? %>
-                  <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link navBtnEffect"%>
-                  <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link navBtnEffect" %>
-                  <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link navBtnEffect" %>
-                <% end %>
-              </div>
-          </nav>
+                  <% elsif patron_signed_in? %>
+                    <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link"%>
+                    <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link" %>
+                    <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link" %>
+                  <% end %>
+                </div>
+            </nav>
+          </div>
+        </div>
       </div>
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12 py-3 removepadding">
-
-
-
+        <div class="col-md-12 yield-container">
 
         <% if notice %>
           <div class="alert alert-warning" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -115,24 +116,25 @@
         <% end %>
 
         <%= yield %>
+
         </div>
       </div>
     </div>
 
-    <footer class="page-footer text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 py-3">
-            <div class="footericons mb-4 flex-center">
-              <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3"></i></a>
-              <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3"></i></a>
-              <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3"></i></a>
-              <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 py-4">
+              <div class="mb-4">
+                <a href="#"><i class="fa fa-facebook fa-lg mr-md-5 mr-3">FB</i></a>
+                <a href="#"><i class="fa fa-twitter fa-lg mr-md-5 mr-3">TWT</i></a>
+                <a href="#"><i class="fa fa-linkedin fa-lg mr-md-5 mr-3">LNK</i></a>
+                <a href="#"><i class="fa fa-instagram fa-lg">IG</i></a>
+              </div>
+              <p>© 2018 Copyright @ &nbsp;<a href="#">CrowdedNot</a></p>
             </div>
-            <p>© 2018 Copyright &nbsp;&nbsp;<a href="#">CrowdedNot</a></p>
           </div>
         </div>
-      </div>
     </footer>
 
   </body>

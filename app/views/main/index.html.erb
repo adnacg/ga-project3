@@ -1,81 +1,81 @@
-  <%#------------------------------- Sign up Modal -----------------------------------------------------------------------%>
+<%#------------------------------- Sign up Modal -----------------------------------------------------------------------%>
 
-  <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
-        </div>
-        <div class="modal-body">
-          <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
-          <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
-          <br />
-          <br />
-          <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
-        </div>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign up as a Restaurant or a Patron?</h5>
+      </div>
+      <div class="modal-body">
+        <%= button_to "Patron", new_patron_registration_path, method: :get, class:"patronbtn" %>
+        <%= button_to "Restaurant", new_user_registration_path, method: :get, class:"userbtn" %>
+        <br />
+        <br />
+        <%= image_tag("modal_icon.png", size: "70x70", class:"modal_img")%>
       </div>
     </div>
   </div>
+</div>
 
-  <%#-------------------------------- End of modal -----------------------------------------------------------------------%>
-<div class="container-fluid swcontainer">
-<div class="row">
-<div class="col-md-12py-3">
+<%#-------------------------------- Parallax -----------------------------------------------------------------------%>
 
-  <div class="slide1">
-  <div class="bgimage">
-  <div class="slide1content">
-    <%= image_tag("splash.png", size: "300x80") %>
-    <h1><strong>LOOKING FOR SEATS?</strong></h1>
+<div class="parallax-slide">
+  <div class="parallax-img">
+    <div class="parallax-content">
 
-    <%= form_with url: users_path, method: :get, class: "indexform", local: true do |form| %>
-      <%= form.text_field :search, class: "swform-control btn disabled", placeholder: "Enter a Restaurant Name" %>
-      <br/>
-      <div class="btnbckimg">
-      <%= form.submit "Search", class: "btn btn-default" =%>
+      <h1><strong>LOOKING FOR SEATS?</strong></h1>
+
+      <%= form_with url: users_path, method: :get, class: "index-search-form", local: true do |form| %>
+        <%= form.text_field :search, class: "index-search btn disabled", placeholder: "Enter a Restaurant Name" %>
+        <br/>
+        <div class="index-search-splash">
+          <%= form.submit "Search", class: "btn btn-default" =%>
+        </div>
+      <% end %>
+
+      <div class="index-show-all">
+        <%= button_to "Show All", users_path, method: :get, class: "btn btn-default" %>
       </div>
-    <% end %> 
-    <div class="showAllBtn">
-    <%= button_to "Show All", users_path, method: :get, class: "btn btn-default" %>
+
     </div>
   </div>
-  </div>
+</div>
+
+<%#-------------------------------- Content -----------------------------------------------------------------------%>
+
+<div class="main-content">
+
+  <div class="main-content-1">
+    <p><%= image_tag('ascustomer.png') %></p>
+    <h1><strong>AS A PATRON</strong></h1>
+    <br/>
+    <p>Have you ever travelled to a restaurant but ended up waiting for a long time to get a table?
+    Have you ever been to your favourite restaurants at peak hour but couldn't get a table for the group?</p>
+    <p>With <strong>CrowdedNot</strong>, you can now easily check for available tables at our extensive list of restaurants in advance!</p>
+    <p>No more surprises.</p>
   </div>
 
-
-  <div class="slide2">
-  <div class="slide2content1">
-      <p><%= image_tag('ascustomer.png') %></p>
-      <h1><strong>AS A PATRON</strong></h1>
-      <br/>
-      <p class="homemsg">Have you ever travelled to a restaurant but ended up waiting for a long time to get a table?
-      Have you ever been to your favourite restaurants at peak hour but couldn't get a table for the group?</p>
-      <p class="homemsg">With <strong>CrowdedNot</strong>, you can now easily check for available tables at our extensive list of restaurants in advance!</p>
-      <p class="homemsg">No more surprises.</p>
-  </div>
-  <div class="slide2content2">
-      <p><%= image_tag('asrestaurant.png') %></p>
-      <h1><strong>AS A RESTAURANT</strong></h1>
-      <br/>
-      <p class="homemsg">
-      We love our customers and we definitely want to provide the best service to them!
-      The best way to never disappoint the patrons is to be able to greet, seat, and serve them food in the shortest time possible!
-      </p>
-      <p class="homemsg">
-      Come join us now and start providing your real-time table turnovers to your customers!
-      </p>
-  </div>
+  <div class="main-content-2">
+    <p><%= image_tag('asrestaurant.png') %></p>
+    <h1><strong>AS A RESTAURANT</strong></h1>
+    <br/>
+    <p>
+    We love our customers and we definitely want to provide the best service to them!
+    The best way to never disappoint the patrons is to be able to greet, seat, and serve them food in the shortest time possible!
+    </p>
+    <p>
+    Come join us now and start providing your real-time table turnovers to your customers!
+    </p>
   </div>
 
-  <div class="slide3">
-  <div class="slide3content">
-      <h1 class="slide3h1"><strong>What Are You Waiting For?</strong></h1>
+  <div>
+    <div>
+      <p><%= image_tag('contact.png') %></p>
+      <h1><strong>DON'T WAIT ANY LONGER</strong></h1>
       <br />
       <br />
       <div><%= link_to 'JOIN US NOW!', signup_modal_path, remote: true, data: { target: "#modal-window", toggle: "modal" }, class: "btn btn-lg themejoinus" %></div>
-  </div>
+    </div>
   </div>
 
-</div>
-</div>
 </div>

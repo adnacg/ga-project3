@@ -1,82 +1,25 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// html {
-//   width: 1440px;
+// -----------------------------------------------------
+
+// .swcontainer {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   height: 100%;
+//   width: 100%;
 // }
 
-.py-3 {
-  padding-top: 0 !important;
-}
-
-.swcontainer {
+// parallax -----------------------------------------------------
+.parallax-slide {
+  height: 700px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
 }
 
-.indexform {
-  display: initial;
-}
-
-.swform-control {
-  margin-left: -22%;
-}
-
-.slide1content h1 {
-  color: black;
-  margin-top: -4%;
-}
-
-.swcontainer input[type="text"] {
-  margin: 20px;
-  width: 600px;
-  height: 50px;
-  font-size: 32px;
-  border-color: black;
-  border-width: 3px;
-  opacity: 1.65;
-}
-
-.swcontainer input[type="submit"] {
-  width: 150px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0);
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-left: -31%;
-}
-
-.swcontainer input[type="submit"]:hover {
-  font-size: 1.7rem;
-}
-
-.btnbckimg {
-  display: inline-block;
-  background: url("splash.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 0%;
-}
-
-.showAllBtn {
-  display: inline-block;
-  color: black;
-  background: url("splash.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.slide1 {
+.parallax-img {
   height: 750px;
-}
-
-.bgimage {
-  height: 770px;
   background-image: url("restaurant2.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -85,48 +28,77 @@
   width: 100%;
 }
 
-.slide1content {
-  padding-top: 250px;
+.parallax-content {
+  max-width: 1000px;
+  margin: 20% auto;
+  text-align: center;
 }
 
-.slide2 {
-  height: 650px;
+// Main Search -----------------------------------------------------
+
+.index-search-form {
+  display: initial;
 }
 
-.slide2 p {
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+.parallax-slide input[type="text"] {
+  margin: 20px;
+  width: 600px;
+  height: 65px;
+  font-size: 32px;
+  border: 5px solid #000;
+  opacity: 1;
 }
 
-.slide2content1 {
-  padding-top: 10%;
-}
-
-.slide2content2 {
-  padding-top: 50px;
-}
-
-.slide3 {
-  height: 1100px;
-  padding-top: 30px;
-  display: flex;
-}
-
-.slide3content {
-  padding-top: 700px;
-  margin: 0 auto;
-}
-
-.slide3h1 {
-  max-width: 600px;
-}
-
-.swmaterial-icons {
-  font-size: 42px;
-  padding-top: 16%;
-}
-
-.homemsg {
+.parallax-slide input[type="submit"] {
+  width: 150px;
+  color: $themeblue;
+  background: transparent;
+  font-weight: 600;
   font-size: 1.5rem;
+}
+
+.parallax-slide input[type="submit"]:hover {
+  font-size: 1.7rem;
+}
+
+.index-search-splash {
+  display: inline-block;
+  background: url("splash.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.index-show-all {
+  display: inline-block;
+  background: url("splash.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// Main Content -----------------------------------------------------
+
+.main-content {
+  p {
+    font-size: 1.5rem;
+  }
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.themejoinus {
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  border: 4px solid $themeblue;
+  max-width: 600px;
+  background-color: $themeblue;
+  font-size: 2rem;
+  color: $themelbeige;
+}
+
+.themejoinus:hover {
+  background-color: $themelbeige;
+  color: $themeblue;
 }
