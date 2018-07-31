@@ -15,10 +15,8 @@
   <div class="wyEditForm">
     <%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
       <p>
-        <%= form.label :name %><br>
+        <%= form.label :name %>
         <%= form.text_field :name %><br>
-        <%= form.label :email %><br>
-        <%= form.text_field :email %>
       </p>
 
       <%= form.submit 'Save Profile', class:"btn btn-primary btn-sm" %>
