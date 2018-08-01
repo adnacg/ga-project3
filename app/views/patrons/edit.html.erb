@@ -2,26 +2,35 @@
 <div class="row">
 <div class="col-sm">
 
-  <div class="ektitle ektitlediv">
-    <p>Edit your profile</p>
-  </div>
+<br/>
+<%= link_to 'keyboard_return', :back, class:"material-icons returnicon" %>
+<%= link_to 'Return', :back, class:"returnicon returnword" %>
 
-  <div class="profileinfodiv">
-    <%= image_tag 'profilepic.png', class:"wyprofileimg"%>
+<div class="ektitle ektitlediv">
+  <p>Edit Your Profile</p>
+</div>
+
+<div class="setting-container">
+
+  <div class="setting-photo-div">
+    <p><%= image_tag 'profilepic.png', size: "200x200"%></p>
     <br/>
-    <p><%= button_tag 'Upload Photo', class: "btn btn-sm buttonTo"%></p>
+    <p><%= button_tag 'Upload Photo', class: "btn btn-sm ekthemebtn"%></p>
   </div>
 
-  <div class="wyEditForm">
+  <div class="separator"></div>
+
+  <div class="edit-field-div textcenter">
     <%= form_with scope: :patron, url: patron_path, method: :patch, local: true do |form| %>
       <p>
-        <%= form.label :name %>
-        <%= form.text_field :name %><br>
+        <strong><%= form.label :name %></strong><br/>
+        <%= form.text_field :name, class:"btn btn-sm themeprofileinput disabled" %><br>
       </p>
-
-      <%= form.submit 'Save Profile', class:"btn btn-primary btn-sm" %>
+      <%= form.submit 'Save Profile', class:"btn btn-sm ekthemebtn" %>
     <% end %>
   </div>
+
+</div>
 
 </div>
 </div>

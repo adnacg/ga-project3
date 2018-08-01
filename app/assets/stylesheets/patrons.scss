@@ -1,130 +1,15 @@
-// Place all the styles related to the patrons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.profileinfodiv {
+.edit-field-div {
+  margin-bottom: 5rem;
+}
+
+.profile-info-div {
   display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  border-bottom: 1px solid #aeadae;
+  border-bottom: 1px solid $themegrey;
 }
 
-.wycontainer {
-  display: flex;
-  flex-direction: row;
-  height: 300px;
-  width: 100%;
-  // justify-content: center;
-  margin-top: 20%;
-}
-
-.wyprofile {
-  //   display: block;
-  margin: 0 auto;
-  height: 300px;
-  position: relative;
-  left: 30%;
-  text-align: center;
-}
-
-.wyparticularh3 {
-  display: inline;
-}
-
-.wyparticular {
-  padding-left: 10px;
-  display: inline;
-  align-self: center;
-}
-
-.wyprofileimg {
-  border: 1px solid #000;
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
-}
-
-.wyprofilepic {
-  align-self: center;
-}
-
-.wybtns .editBtn p {
-  margin-bottom: 8px;
-}
-
-.wybtns .deleteBtn p {
-  margin-bottom: 8px;
-}
-
-.buttonTo {
-  background: #123c69;
-  color: white;
-}
-
-.buttonTo:hover {
-  background: white;
-  color: #123c69;
-  border-color: #123c69;
-}
-
-.wyEditForm {
-  text-align: center;
-}
-
-.wyEditForm p {
-  margin-top: 10px;
-}
-
-.wyEditForm label {
-  float: left;
-  margin-left: 10%;
-}
-
-.wyEditForm input {
-  margin-bottom: 6px;
-}
-
-.wyEditForm p label:nth-child(odd) {
-  margin-bottom: 4px;
-}
-
-.wyEditForm p label:nth-child(3) {
-  margin-top: 6px;
-}
-
-.wyEditTitle,
-.wycontainer2 {
-  position: relative;
-  top: 4%;
-}
-
-.wyEditTitle {
-  border-bottom: 1px solid #aeadae;
-}
-
-.wyEditPic {
-  position: relative;
-  height: 250px;
-  margin-right: 10px;
-  top: 8%;
-}
-
-.wyEdit > label {
-  margin: 0;
-}
-
-.wyEdit > input {
-  margin-bottom: 15px;
-}
-
-.wyEditSubmit input {
-  position: relative;
-  top: 10%;
-  right: 60%;
-  width: 200px;
-}
-
-.wytitle {
-  border-bottom: 1px solid #aeadae;
+.profile-option {
+  margin: 2rem auto;
 }

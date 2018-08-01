@@ -22,9 +22,13 @@
       </div>
     <% end %>
   <% else %>
-    <div class="">
-      <p>No favourites yet!</p>
-      <p>Browse our <%= link_to 'list', users_path %> now.</p>
+    <div class="textcenter">
+      <p>No favourites yet...</p>
+      <p>Why not browse our extensive list of restaurants?</p>
+      <br/>
+      <div>
+        <%= link_to 'YES PLEASE!', users_path, class: "btn btn-lg themejoinus" %>
+      </div>
     </div>
   <% end %>
 
