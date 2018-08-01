@@ -125,8 +125,11 @@ nav a:hover {
 
 .alert {
   position: absolute;
-  left: 1px;
-  right: 1px;
+  left: 100px;
+  right: 100px;
+  text-align: center;
+  background: transparent;
+  border: none;
 }
 
 // Footer ----------------------------------------------------------------------
@@ -152,4 +155,17 @@ nav a:hover {
 
 .ektitledesc {
   font-size: 1rem;
+}
+
+// Cancel Btn ----------------------------------------------------------------------
+
+.cancel-btn {
+  background-color: transparent;
+  border: 1px solid $themepink;
+  color: $themepink;
+}
+
+.cancel-btn:hover {
+  background-color: $themepink;
+  color: $themelbeige;
 }

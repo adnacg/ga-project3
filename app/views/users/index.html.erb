@@ -3,19 +3,19 @@
 <div class="col-sm">
 
   <div class="ektitle ektitlediv">
-  <p>Check Out The Crowds At These Restaurants</p>
+    <p>Check Out The Crowds At These Restaurants</p>
   </div>
 
-    <div class="userindexdiv">
+    <div class="wraprow flexcenter">
       <% @users.each do |user| %>
-        <div class="card ekusercard" style="width: 18rem;">
-          <%= link_to image_tag("cardboard_bg.jpg", class:"card-img-top ekcardimg"), user_path(user) %>
+        <div class="card user-card">
+          <%= link_to image_tag("cardboard_bg.jpg", class:"card-img-top user-card-img"), user_path(user) %>
           <div class="card-body">
             <h5 class="card-title"><strong><%= user.name %></strong></h5>
 
-            <div class="detaildiv">
+            <div class="user-detail-div">
             <%= image_tag("splashsm.png", size: "100x35") %>
-            <%= link_to 'Details', user_path(user), class: "btn btn-sm ekdetailbtn" %>
+            <%= link_to 'Details', user_path(user), class: "btn btn-sm user-detail-btn" %>
             </div><br/>
 
             <% if @users_info[user.id][:total_tables_count] == 0 %>
@@ -23,9 +23,9 @@
             <% else %>
               <%= @users_info[user.id][:free_tables_count] %> Tables Available
               <% if @users_info[user.id][:free_tables_count].to_f / @users_info[user.id][:total_tables_count].to_f < 0.2 %>
-                <p class="small" style="color: #AC3B61;"><strong>Filling up fast!</strong></p>
+                <p class="user-index-progressf"><strong>Filling up fast!</strong></p>
               <% elsif  @users_info[user.id][:free_tables_count].to_f / @users_info[user.id][:total_tables_count].to_f < 0.5 %>
-                <p class="small" style="color:orange"><strong>More than half tables are taken!</strong></p>
+                <p class="user-index-progresst"><strong>More than half tables are taken!</strong></p>
               <% end %>
             <% end %>
 

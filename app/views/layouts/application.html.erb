@@ -108,12 +108,16 @@
         <div class="col-md-12 yield-container">
 
         <% if notice %>
-          <div class="alert alert-warning" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span></button><%= notice %></div>
+          <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= notice %>
+          </div>
         <% end %>
         <% if alert %>
-          <div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span></button><%= alert %></div>
+          <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= alert %>
+          </div>
         <% end %>
 
         <%= yield %>
@@ -122,7 +126,7 @@
       </div>
     </div>
 
-    <footer class="page-footer">
+    <footer id="footer" class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-12 py-4">
@@ -138,5 +142,19 @@
       </div>
     </footer>
 
+
+    <script>
+      $(document).ready(function() {
+
+          var docHeight = $(window).height();
+          var footerHeight = $('#footer').height();
+          var footerTop = $('#footer').position().top + footerHeight;
+
+          if (footerTop < docHeight)
+              $('#footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+      });
+    </script>
+
   </body>
 </html>
+

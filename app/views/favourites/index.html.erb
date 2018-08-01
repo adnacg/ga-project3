@@ -6,19 +6,28 @@
   <p>Your Favourite Restaurants</p>
 </div>
 
-<div class="userindexdiv">
-  <% @users.each do |user| %>
-    <div class="card ekusercard" style="width: 18rem;">
-    <%= image_tag("cardboard_bg.jpg", class:"card-img-top ekcardimg") %>
-      <div class="card-body">
-        <h5 class="card-title"><strong><%= user.name %></strong></h5>
-        <div class="detaildiv">
-          <%= image_tag("splashsm.png", size: "100x35") %>
-          <%= link_to 'Details', user_path(user), class: "btn btn-sm ekdetailbtn" %>
-        </div><br/>
+<div class="wraprow flexcenter">
+
+  <% if @users.count > 0 %>
+    <% @users.each do |user| %>
+      <div class="card user-card">
+      <%= image_tag("cardboard_bg.jpg", class:"card-img-top user-card-img") %>
+        <div class="card-body">
+          <h5 class="card-title"><strong><%= user.name %></strong></h5>
+          <div class="user-detail-div">
+            <%= image_tag("splashsm.png", size: "100x35") %>
+            <%= link_to 'Details', user_path(user), class: "btn btn-sm user-detail-btn" %>
+          </div><br/>
+        </div>
       </div>
+    <% end %>
+  <% else %>
+    <div class="">
+      <p>No favourites yet!</p>
+      <p>Browse our <%= link_to 'list', users_path %> now.</p>
     </div>
   <% end %>
+
 </div>
 
 </div>

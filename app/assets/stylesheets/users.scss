@@ -1,31 +1,56 @@
-.detaildiv {
-  margin-left: -20px;
-}
+// User Setting ----------------------------------------------------------------------
 
-.ekdetailbtn {
-  margin-left: -65px;
-}
-
-.ekdetailbtn:hover {
-  font-size: 105%;
-}
-
-.userindexdiv {
+.setting-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  justify-content: center;
 }
 
-.ekusercard {
-  background-image: url("wallbg.jpg");
-  border: 1px solid transparent;
-  margin: 20px;
+.setting-photo-div {
+  flex-direction: column;
+  text-align: center;
 }
 
-.ekcardimg {
-  height: 220px;
-  // border: 1px so;
+.setting-input-div {
+  flex-direction: column;
+}
+
+.hintmsg {
+  font-size: 0.6rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .setting-container {
+    flex-direction: column;
+  }
+
+  .setting-input-div {
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .setting-input-div {
+    margin-left: 5rem;
+  }
+}
+
+// User Individual ----------------------------------------------------------------------
+
+.user-seater-div {
+  text-align: center;
+  width: 250px;
+  height: 450px;
+  margin: 2rem;
+}
+
+.user-available-card {
+  background: transparent;
+  border: 1px solid $themepink;
+}
+
+.user-detail-div {
+  margin-left: -20px;
 }
 
 .booknowbtn {
@@ -36,14 +61,18 @@
   font-size: 105%;
 }
 
+// Return Icon ----------------------------------------------------------------------
+
 .returnicon {
   float: left;
 }
 
 .returnword {
-  float: left;
   font-size: 0.8rem;
+  font-weight: bold;
 }
+
+// Favourite Icon ----------------------------------------------------------------------
 
 .favtitle {
   margin: inherit;
@@ -56,13 +85,52 @@
   width: 30px;
   height: 30px;
   color: #ac3b61;
-  display: flex;
-  justify-content: center;
 }
 
 .tooltip-inner {
   background-color: #ac3b61;
 }
+
+// User Index ----------------------------------------------------------------------
+
+.user-detail-btn {
+  margin-left: -65px;
+}
+
+.user-detail-btn:hover {
+  font-size: 105%;
+}
+
+.wraprow {
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+// User Index Card ----------------------------------------------------------------------
+
+.user-card {
+  background-image: url("wallbg.jpg");
+  border: 1px solid transparent;
+  margin: 20px;
+  width: 18rem;
+}
+
+.user-card-img {
+  height: 220px;
+}
+
+.user-index-progressf {
+  color: #ac3b61;
+  font-size: 0.8rem;
+}
+
+.user-index-progresst {
+  color: orange;
+  font-size: 0.8rem;
+}
+
+// User Sign Up Setup ----------------------------------------------------------------------
 
 .setupdiv {
   display: flex;
@@ -70,53 +138,11 @@
   text-align: center;
 }
 
-.ekseatersetupdiv {
+.seater-setup-div {
   text-align: center;
   float: left;
   width: 200px;
   height: 300px;
   margin-right: 20px;
   padding: 10px;
-}
-
-.eksubmitbtn {
-  background-color: #123c69;
-  color: #eee2dc;
-  padding: 5px 10px 5px 10px;
-}
-
-.profilephotodiv {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.leftprofilediv {
-  float: left;
-}
-
-.ekedituserdiv {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.ekedituserinnerdiv {
-  margin-left: 100px;
-}
-
-.hintmsg {
-  font-size: 0.6rem;
-}
-
-.ekcancelbtn {
-  background-color: transparent;
-  border: 1px solid #aa3d61;
-  color: #aa3d61;
-}
-
-.ekcancelbtn:hover {
-  background-color: #aa3d61;
-  color: #eee2dc;
 }
