@@ -1,42 +1,27 @@
+// Dashboard -----------------------------------------------------
 .table-index-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.ektitle {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.ektitlediv {
+.seater-div {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.ektitledesc {
-  font-size: 1rem;
-}
-
-.ekseaterdiv {
-  text-align: center;
-  float: left;
-  width: 300px;
+  width: 250px;
   height: 650px;
-  margin-right: 20px;
-  padding: 10px;
+  margin: 2rem;
 }
 
-.ekseatertype {
+.seater-text {
   margin-top: -40px;
 }
 
-.ekcarddiv {
+.card-div {
   background: transparent;
   border: 1px solid #ac3b61;
 }
 
-.ekadjustbtn {
+.adjustbtn-div {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

@@ -7,7 +7,10 @@
       <p>Log In</p>
     </div>
 
+    <div class="textcenter"><%= devise_error_messages! %><br/></div>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
       <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "Email", class:"btn btn-sm themeprofileinput disabled" %>
       </div>
@@ -31,6 +34,7 @@
     <div class="form-submit-separator"></div>
 
     <%= render "devise/shared/links" %>
+
   </div>
 
 </div>
