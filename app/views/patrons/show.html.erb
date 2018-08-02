@@ -6,27 +6,33 @@
   Your Profile
 </div>
 
-<div class="profile-info-div">
-  <div>
-    <%= image_tag 'profilepic.png', size: "200x200" %>
-  </div>
-  <br>
-  <p><strong>Name: </strong><%= @patron.name %></p>
-  <p><strong>Email: </strong><%= @patron.email %></p>
-</div>
+<div class="setting-container">
 
-<div>
-  <div class="profile-option">
-    <h5>Edit Profile</h5>
-    <p>Edit your profile to change username</p>
-    <%= button_to 'Edit Profile', edit_patron_path(current_patron), method: :get, class: "btn btn-sm ekthemebtn"%>
+  <div class="setting-photo-div">
+    <div>
+      <%= image_tag 'profilepic.png', size: "200x200" %>
+    </div>
+    <br>
+    <p><strong>Name: </strong><%= @patron.name %></p>
+    <p><strong>Email: </strong><%= @patron.email %></p>
   </div>
 
-  <div class="profile-option">
-    <h5>Delete Account</h5>
-    <p>We'll be sad to see you go :(</p>
-    <%= button_to 'Delete Profile', patron_path(current_patron), method: :delete, class: "btn btn-outline-danger btn-sm", data: { confirm: 'Are you sure?' } %>
+  <div class="setting-input-div">
+    <div>
+      <h5>Update Profile</h5>
+      <p>Edit your name here.</p>
+      <%= button_to 'Edit Profile', edit_patron_path(current_patron), method: :get, class: "btn btn-sm ekthemebtn"%>
+    </div>
+
+    <div class="full-separator"></div>
+
+    <div>
+      <h5>Delete Account</h5>
+      <p>We'll be sad to see you go :(</p>
+      <%= button_to 'Delete Profile', patron_path(current_patron), method: :delete, class: "btn cancel-btn btn-sm", data: { confirm: 'Are you sure?' } %>
+    </div>
   </div>
+
 </div>
 
 </div>
