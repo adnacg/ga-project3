@@ -5,5 +5,6 @@ class Patron < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :favourites
   has_many :favourite_users, through: :favourites, source: :user
-  # has_many :booked_users, through: :bookings, source: :user
+  has_many :bookings
+  has_many :booked_users, through: :bookings, source: :user
 end

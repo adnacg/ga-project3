@@ -19,9 +19,11 @@ Rails.application.routes.draw do
 
   resources :patrons, only: [:show, :edit, :update, :destroy] do
     resources :favourites, only: [:create, :index]
+    resources :bookings, only: [:create, :index]
   end
 
   delete '/patrons/:patron_id/favourites', to: 'favourites#destroy', as: 'favourite_delete'
+  delete '/patrons/:patron_id/bookings', to: 'bookings#destroy', as: 'booking_delete'
 
   get 'signups/modal', to: 'signups#modal', as: 'signup_modal'
   get 'signins/modal', to: 'signins#modal', as: 'signin_modal'

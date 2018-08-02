@@ -69,8 +69,8 @@
     <p><strong>Contact</strong>: &nbsp;6888-6888</p>
 
     <div class="user-detail-div">
-      <%= image_tag("splashsm.png", size: "100x35") %>
-      <a href="#" class="booknowbtn"><strong>Book Now!</strong></a>
+      <%= image_tag("splashsm.png", size: "100x35", class:"booknow-splash") %>
+      <%= button_to 'Book now!', patron_bookings_path(current_patron), method: :post, params: { user_id: @user.id }, class:"booknowbtn"%>
     </div>
   </div>
 

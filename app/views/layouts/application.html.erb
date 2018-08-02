@@ -95,6 +95,7 @@
                   <% elsif patron_signed_in? %>
                     <%= link_to 'Profile', patron_path(current_patron), class: "nav-item nav-link"%>
                     <%= link_to 'My Favourites', patron_favourites_path(current_patron), class: "nav-item active nav-link" %>
+                    <%= link_to 'My Bookings', patron_bookings_path(current_patron), class: "nav-item active nav-link" %>
                     <%= link_to 'Sign Out', destroy_patron_session_url, method: :delete, class: "nav-item active nav-link" %>
                   <% end %>
                 </div>

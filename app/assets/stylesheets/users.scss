@@ -53,8 +53,15 @@
   margin-left: -20px;
 }
 
+.booknow-splash {
+  margin-bottom: -3rem;
+}
+
 .booknowbtn {
-  margin-left: -65px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: $themeblue;
 }
 
 .booknowbtn:hover {
